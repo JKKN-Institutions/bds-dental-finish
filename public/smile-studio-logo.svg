@@ -1,0 +1,8 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="40" rx="8" fill="#FCE7F3"/>
+  <text x="60" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#374151">Smile Studio</text>
+  <path d="M10 20 Q15 15 20 20 Q25 25 30 20" stroke="#EC4899" stroke-width="3" fill="none"/>
+  <circle cx="12" cy="18" r="2" fill="#EC4899"/>
+  <circle cx="28" cy="18" r="2" fill="#EC4899"/>
+  <path d="M15 22 Q20 25 25 22" stroke="#EC4899" stroke-width="2" fill="none"/>
+</svg> 

@@ -1,0 +1,7 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="40" rx="8" fill="#F3F4F6"/>
+  <text x="60" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#374151">Clove</text>
+  <path d="M10 20 Q15 15 20 20 Q25 25 30 20" stroke="#10B981" stroke-width="3" fill="none"/>
+  <circle cx="12" cy="18" r="2" fill="#10B981"/>
+  <circle cx="28" cy="18" r="2" fill="#10B981"/>
+</svg> 
