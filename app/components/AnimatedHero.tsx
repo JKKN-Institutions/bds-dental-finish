@@ -87,7 +87,7 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
             ease: "linear"
           }}
         />
-        
+
         {/* Secondary Floating Elements */}
         <motion.div
           className="absolute top-1/4 left-1/4 w-20 h-20 bg-gradient-to-r from-green-100/60 to-yellow-100/60 rounded-full opacity-30"
@@ -116,7 +116,7 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
             delay: 2
           }}
         />
-        
+
         {/* Animated Grid Pattern */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-30">
           <div className="absolute inset-0" style={{
@@ -139,7 +139,7 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
               variants={itemVariants}
             >
               <motion.div 
-                className="text-xl sm:text-3xl md:text-3xl lg:text-4xl mb-2 bg-gradient-to-r from-green-600 via-green-700 to-yellow-600 bg-clip-text text-transparent font-['Poppins']"
+                className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl mb-2 bg-gradient-to-r from-green-600 via-green-700 to-yellow-600 bg-clip-text text-transparent font-['Poppins']"
                 animate={{
                   backgroundPosition: ["0% 0%", "100% 100%"],
                 }}
@@ -151,10 +151,10 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
               >
                 Top Private Dental College
               </motion.div>
-              <motion.div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-2 font-['Poppins']">
+              <motion.div className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl mb-2 font-['Poppins']">
                 in Tamilnadu | <span className="text-green-600 font-bold font-['Poppins']">97% Get</span>
               </motion.div>
-              <motion.div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-['Poppins']">
+              <motion.div className="text-xl sm:text-xl md:text-2xl lg:text-3xl font-['Poppins']">
                 <span className="bg-gradient-to-r from-green-600 to-yellow-600 bg-clip-text text-transparent font-bold font-['Poppins']">
                   ₹5.2 LPA Jobs | <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent font-extrabold animate-pulse">Limited Seats</span>
                 </span>
@@ -169,14 +169,14 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-6 sm:mb-8"
+              className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-4 mb-6 sm:mb-8"
               variants={itemVariants}
             >
               {/* Primary CTA Button */}
               <motion.button
-                className="bg-gradient-to-r from-green-600 via-green-700 to-yellow-600 hover:from-green-700 hover:via-green-800 hover:to-yellow-700 text-white font-bold py-3 sm:py-4 px-1 sm:px-4 rounded-2xl shadow-2xl transform transition-all duration-300 relative overflow-hidden group border border-white/20 font-['Poppins'] w-fit self-start"
+                className="bg-gradient-to-r from-green-600 via-green-700 to-yellow-600 hover:from-green-700 hover:via-green-800 hover:to-yellow-700 text-white font-bold py-3 sm:py-4 px-1 sm:px-4 rounded-2xl shadow-2xl transform transition-all duration-300 relative overflow-hidden group border border-white/20 font-['Poppins'] w-fit self-center sm:self-auto mx-auto sm:mx-0"
                 variants={buttonVariants}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   boxShadow: "0 25px 50px -12px rgba(0, 109, 58, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2)"
                 }}
@@ -194,7 +194,7 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
                     ease: "linear"
                   }}
                 />
-                
+
                 {/* Shimmer Effect */}
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
@@ -208,19 +208,19 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
                     delay: 0.5
                   }}
                 />
-                
+
                 {/* Button Content */}
-                <span className="relative flex items-center justify-center gap-2 text-xs sm:text-xs whitespace-nowrap">
+                <span className="relative  flex items-center justify-center gap-2 text-sm sm:text-xs whitespace-nowrap">
                   <motion.div
                     className="w-4 h-4 bg-white/20 rounded-full flex items-center justify-center"
-                    animate={{ 
+                    animate={{
                       scale: [1, 1.1, 1],
                       rotate: [0, 5, -5, 0]
                     }}
-                    transition={{ 
-                      duration: 2, 
-                      repeat: Infinity, 
-                      ease: "easeInOut" 
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut"
                     }}
                   >
                     <span className="text-xs">💬</span>
@@ -228,13 +228,13 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
                   <span className="font-bold">Apply for BDS Admission</span>
                   <motion.div
                     className="w-1 h-1 bg-white rounded-full"
-                    animate={{ 
+                    animate={{
                       scale: [1, 1.5, 1],
                       opacity: [0.5, 1, 0.5]
                     }}
-                    transition={{ 
-                      duration: 1.5, 
-                      repeat: Infinity, 
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
                       ease: "easeInOut",
                       delay: 0.5
                     }}
@@ -244,9 +244,9 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
 
               {/* Secondary CTA Button */}
               <motion.button
-                className="bg-white/90 backdrop-blur-sm border-2 border-green-600/50 text-green-700 hover:bg-green-50 hover:border-green-700 hover:text-green-800 font-bold py-3 sm:py-4 px-1 sm:px-4 rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl relative overflow-hidden group w-fit self-start"
+                className="bg-white/90 backdrop-blur-sm border-2 border-green-600/50 text-green-700 hover:bg-green-50 hover:border-green-700 hover:text-green-800 font-bold py-3 sm:py-4 px-1 sm:px-4 rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl relative overflow-hidden group w-fit self-center sm:self-auto mx-auto sm:mx-0"
                 variants={buttonVariants}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.02,
                   boxShadow: "0 20px 40px -12px rgba(0, 109, 58, 0.3)"
                 }}
@@ -264,7 +264,7 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
                     ease: "linear"
                   }}
                 />
-                
+
                 {/* Subtle Shimmer */}
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-green-100/20 to-transparent"
@@ -278,18 +278,18 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
                     delay: 1
                   }}
                 />
-                
+
                 {/* Button Content */}
-                <span className="relative flex items-center justify-center gap-2 text-xs sm:text-xs whitespace-nowrap">
+                <span className="relative flex items-center justify-center gap-2 text-sm sm:text-xs whitespace-nowrap">
                   <motion.div
                     className="w-4 h-4 bg-green-100 rounded-full flex items-center justify-center"
-                    animate={{ 
+                    animate={{
                       scale: [1, 1.05, 1],
                       rotate: [0, 3, -3, 0]
                     }}
-                    transition={{ 
-                      duration: 2.5, 
-                      repeat: Infinity, 
+                    transition={{
+                      duration: 2.5,
+                      repeat: Infinity,
                       ease: "easeInOut",
                       delay: 0.3
                     }}
@@ -299,13 +299,13 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
                   <span className="font-semibold">Download Career Kit</span>
                   <motion.div
                     className="w-1 h-1 bg-green-400 rounded-full"
-                    animate={{ 
+                    animate={{
                       scale: [1, 1.3, 1],
                       opacity: [0.6, 1, 0.6]
                     }}
-                    transition={{ 
-                      duration: 2, 
-                      repeat: Infinity, 
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
                       ease: "easeInOut",
                       delay: 0.8
                     }}
@@ -317,7 +317,7 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
 
           </div>
 
-                    {/* Hero Right Side - Enhanced Video Section */}
+          {/* Hero Right Side - Enhanced Video Section */}
           <motion.div
             className="mt-8 sm:mt-12 lg:mt-0 relative"
             variants={itemVariants}
@@ -344,7 +344,7 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
                   ease: "linear"
                 }}
               />
-              
+
               {/* Floating Decorative Elements */}
               <motion.div
                 className="absolute top-6 right-6 w-8 h-8 bg-gradient-to-r from-green-400 to-yellow-500 rounded-full opacity-60"
@@ -377,7 +377,7 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
               {/* Video Placeholder */}
               <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 bg-gradient-to-br from-green-100 via-yellow-100 to-green-100 rounded-2xl overflow-hidden border border-white/50">
                 {/* Animated Gradient Overlay */}
-                <motion.div 
+                <motion.div
                   className="absolute inset-0 bg-gradient-to-br from-green-600/20 via-yellow-600/20 to-green-600/20"
                   animate={{
                     backgroundPosition: ["0% 0%", "100% 100%"],
@@ -388,7 +388,7 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
                     ease: "linear"
                   }}
                 />
-                
+
                 {/* Shimmer Effect */}
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
@@ -402,7 +402,7 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
                     delay: 1
                   }}
                 />
-                
+
                 {/* Video Player Placeholder */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   {/* Outer Glow Ring */}
@@ -418,11 +418,11 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
                       ease: "easeInOut"
                     }}
                   />
-                  
+
                   {/* Main Play Button */}
                   <motion.div
                     className="relative w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-green-500 via-green-600 to-yellow-500 backdrop-blur-sm rounded-full flex items-center justify-center shadow-2xl cursor-pointer border-2 border-white/30 overflow-hidden group"
-                    whileHover={{ 
+                    whileHover={{
                       scale: 1.15,
                       boxShadow: "0 20px 40px rgba(0, 109, 58, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2)"
                     }}
@@ -452,10 +452,10 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
                         ease: "linear"
                       }}
                     />
-                    
+
                     {/* Inner Glow Ring */}
                     <div className="absolute inset-1 bg-gradient-to-br from-white/20 to-transparent rounded-full"></div>
-                    
+
                     {/* Shimmer Effect */}
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
@@ -469,7 +469,7 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
                         delay: 0.5
                       }}
                     />
-                    
+
                     {/* Play Icon Container */}
                     <div className="relative flex items-center justify-center">
                       {/* Play Icon Background */}
@@ -486,7 +486,7 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
                           }}
                         />
                       </div>
-                      
+
                       {/* Outer Ring */}
                       <motion.div
                         className="absolute w-10 h-10 sm:w-12 sm:h-12 border-2 border-white/40 rounded-full"
