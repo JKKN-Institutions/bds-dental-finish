@@ -169,12 +169,12 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8"
+              className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-6 sm:mb-8"
               variants={itemVariants}
             >
               {/* Primary CTA Button */}
               <motion.button
-                className="bg-gradient-to-r from-green-600 via-green-700 to-yellow-600 hover:from-green-700 hover:via-green-800 hover:to-yellow-700 text-white font-bold py-3 sm:py-4 px-1 sm:px-4 rounded-2xl shadow-2xl transform transition-all duration-300 relative overflow-hidden group border border-white/20 font-['Poppins']"
+                className="bg-gradient-to-r from-green-600 via-green-700 to-yellow-600 hover:from-green-700 hover:via-green-800 hover:to-yellow-700 text-white font-bold py-3 sm:py-4 px-1 sm:px-4 rounded-2xl shadow-2xl transform transition-all duration-300 relative overflow-hidden group border border-white/20 font-['Poppins'] w-fit self-start"
                 variants={buttonVariants}
                 whileHover={{ 
                   scale: 1.05,
@@ -244,7 +244,7 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
 
               {/* Secondary CTA Button */}
               <motion.button
-                className="bg-white/90 backdrop-blur-sm border-2 border-green-600/50 text-green-700 hover:bg-green-50 hover:border-green-700 hover:text-green-800 font-bold py-3 sm:py-4 px-1 sm:px-4 rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl relative overflow-hidden group"
+                className="bg-white/90 backdrop-blur-sm border-2 border-green-600/50 text-green-700 hover:bg-green-50 hover:border-green-700 hover:text-green-800 font-bold py-3 sm:py-4 px-1 sm:px-4 rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl relative overflow-hidden group w-fit self-start"
                 variants={buttonVariants}
                 whileHover={{ 
                   scale: 1.02,
