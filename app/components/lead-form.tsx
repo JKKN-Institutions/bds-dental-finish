@@ -126,14 +126,7 @@ export default function LeadForm() {
                   </div>
                   <span className="text-slate-200 font-medium text-sm">Career Placement Support</span>
                 </div>
-              </div>
-
-              {/* Professional Dental Icon */}
-              <div className="flex justify-center lg:justify-start">
-                <div className="w-16 h-16 bg-gradient-to-br from-white/10 to-white/5 rounded-2xl flex items-center justify-center border border-white/20 shadow-lg">
-                  <span className="text-3xl">🦷</span>
-                </div>
-              </div>
+              </div>          
             </div>
           </div>
         </div>
