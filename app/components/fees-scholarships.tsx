@@ -190,8 +190,8 @@ export default function FeesScholarships() {
                         <tbody>
                           <tr className="odd:bg-white even:bg-gray-50">
                             <td className="px-4 py-3 border-t">{selectedCommunity}</td>
-                            <td className={`px-4 py-3 border-t font-semibold ${selectedFeeType === 'DS' ? 'bg-blue-50' : ''}`}>{currentFees.ds}</td>
-                            <td className={`px-4 py-3 border-t font-semibold ${selectedFeeType === 'HS' ? 'bg-emerald-50' : ''}`}>{currentFees.hs}</td>
+                            <td className={`px-4 py-3 border-t font-semibold text-gray-900 ${selectedFeeType === 'DS' ? 'bg-blue-50' : ''}`}>{currentFees.ds}</td>
+                            <td className={`px-4 py-3 border-t font-semibold text-gray-900 ${selectedFeeType === 'HS' ? 'bg-emerald-50' : ''}`}>{currentFees.hs}</td>
                           </tr>
                         </tbody>
                       </table>
@@ -199,14 +199,14 @@ export default function FeesScholarships() {
                   </div>
                   <div className="space-y-3">
                     <div className={`rounded-lg p-4 border ${selectedFeeType === 'HS' ? 'opacity-60' : 'bg-blue-50 border-blue-100'} ${selectedFeeType === 'DS' ? 'ring-2 ring-blue-300' : ''}`}>
-                      <p className="text-xs text-blue-700 font-semibold mb-1">Tuition Fees (with Instruments & Materials)</p>
-                      <p className="text-xl font-bold text-blue-700">{currentFees.ds}</p>
-                      <p className="text-[11px] text-blue-700/80">Applies for Day Scholar (DS)</p>
+                      <p className="text-xs text-gray-800 font-semibold mb-1">Tuition Fees (with Instruments & Materials)</p>
+                      <p className="text-xl font-bold text-gray-900">{currentFees.ds}</p>
+                      <p className="text-[11px] text-gray-700">Applies for Day Scholar (DS)</p>
                     </div>
                     <div className={`rounded-lg p-4 border ${selectedFeeType === 'DS' ? 'opacity-60' : 'bg-emerald-50 border-emerald-100'} ${selectedFeeType === 'HS' ? 'ring-2 ring-emerald-300' : ''}`}>
-                      <p className="text-xs text-emerald-700 font-semibold mb-1">Hostel Fees (with Instruments & Materials)</p>
-                      <p className="text-xl font-bold text-emerald-700">{currentFees.hs}</p>
-                      <p className="text-[11px] text-emerald-700/80">Applies for Hostel (HS)</p>
+                      <p className="text-xs text-gray-800 font-semibold mb-1">Hostel Fees (with Instruments & Materials)</p>
+                      <p className="text-xl font-bold text-gray-900">{currentFees.hs}</p>
+                      <p className="text-[11px] text-gray-700">Applies for Hostel (HS)</p>
                     </div>
                   </div>
                   </div>
