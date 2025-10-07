@@ -30,7 +30,7 @@ export default function AdmissionTimelineWidget() {
       step: "Counselling Participation",
       help: "Lock your college preferences.",
       button: "Choose Preferences",
-      month: "July 2024",
+      month: "August 2024",
       icon: "🎯",
       color: "from-yellow-500 to-yellow-600",
       bgColor: "bg-yellow-50"
@@ -54,15 +54,6 @@ export default function AdmissionTimelineWidget() {
       bgColor: "bg-yellow-50"
     },
     {
-      step: "Fees Payment",
-      help: "Pay fees to confirm your seat.",
-      button: "Pay Fees",
-      month: "August 2024",
-      icon: "💳",
-      color: "from-green-500 to-green-600",
-      bgColor: "bg-green-50"
-    },
-    {
       step: "Documents Verification",
       help: "Get originals verified.",
       button: "Verify Documents",
@@ -72,10 +63,19 @@ export default function AdmissionTimelineWidget() {
       bgColor: "bg-yellow-50"
     },
     {
+      step: "Fees Payment",
+      help: "Pay fees to confirm your seat.",
+      button: "Pay Fees",
+      month: "September 2024",
+      icon: "💳",
+      color: "from-green-500 to-green-600",
+      bgColor: "bg-green-50"
+    },
+    {
       step: "Commencement of Class",
       help: "Classes begin—welcome!",
       button: "Start Classes",
-      month: "September 2024",
+      month: "October 2024",
       icon: "🎓",
       color: "from-green-500 to-emerald-500",
       bgColor: "bg-green-50"
