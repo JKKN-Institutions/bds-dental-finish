@@ -134,7 +134,7 @@ export default function FeesScholarships() {
               <h3 className="text-lg font-bold text-gray-900 mb-3">Step 2: Select Your Community/Category</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <select
-                  className="w-full rounded-lg border-2 border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400 disabled:bg-gray-100 disabled:text-gray-400"
+                  className="w-full rounded-lg border-2 border-gray-200 px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400 disabled:bg-gray-100 disabled:text-gray-400"
                   disabled={!selectedQuota}
                   value={selectedCommunity}
                   onChange={(e) => setSelectedCommunity(e.target.value as Community)}
@@ -164,7 +164,7 @@ export default function FeesScholarships() {
                     <div>
                       <label className="block text-sm font-medium text-gray-800 mb-1">Select Accommodation</label>
                       <select
-                        className="w-full rounded-lg border-2 border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400"
+                        className="w-full rounded-lg border-2 border-gray-200 px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400"
                         value={selectedFeeType}
                         onChange={(e) => setSelectedFeeType((e.target.value || '') as FeeType | '')}
                         aria-label="Select Accommodation Type"
