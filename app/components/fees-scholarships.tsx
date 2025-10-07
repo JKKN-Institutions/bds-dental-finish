@@ -4,7 +4,7 @@ import { motion, useInView } from 'framer-motion';
 import { useMemo, useRef, useState } from 'react';
 
 type Quota = 'GQ' | 'MQ';
-type Community = 'GQ' | 'BC/BCM' | 'SC/SCA/ST' | 'BC-CC';
+type Community = 'OC_GROUP' | 'SC_GROUP';
 type FeeType = 'DS' | 'HS';
 
 interface FeePair {
@@ -13,31 +13,25 @@ interface FeePair {
 }
 
 const GQ_COMMUNITIES: { label: string; value: Community }[] = [
-  { label: 'General (GQ)', value: 'GQ' },
-  { label: 'Backward Classes (BC/BCM)', value: 'BC/BCM' },
-  { label: 'Scheduled Castes / Scheduled Tribes (SC/SCA/ST)', value: 'SC/SCA/ST' },
-  { label: 'Backward Class Christian (BC-CC)', value: 'BC-CC' },
+  { label: 'OC/BC/BCM/BC/DNC', value: 'OC_GROUP' },
+  { label: 'SC/SCA/ST/BC-CC', value: 'SC_GROUP' },
 ];
 
 const MQ_COMMUNITIES: { label: string; value: Community }[] = [
-  { label: 'General (GQ)', value: 'GQ' },
-  { label: 'Backward Classes (BC/BCM)', value: 'BC/BCM' },
-  { label: 'Scheduled Castes / Scheduled Tribes (SC/SCA/ST)', value: 'SC/SCA/ST' },
-  { label: 'Backward Class Christian (BC-CC)', value: 'BC-CC' },
+  { label: 'OC/BC/BCM/BC/DNC', value: 'OC_GROUP' },
+  { label: 'SC/SCA/ST/BC-CC', value: 'SC_GROUP' },
 ];
 
 const GQ_FEES: Record<Community, FeePair> = {
-  'GQ': { ds: '3.5L', hs: '3.5L' },
-  'BC/BCM': { ds: '4.25L', hs: '4.25L' },
-  'SC/SCA/ST': { ds: '3.5L', hs: '3.5L' },
-  'BC-CC': { ds: '4.25L', hs: '4.25L' },
+  // All communities DS=3.5L, HS=4.25L under GQ
+  'OC_GROUP': { ds: '3.5L', hs: '4.25L' },
+  'SC_GROUP': { ds: '3.5L', hs: '4.25L' },
 };
 
 const MQ_FEES: Record<Community, FeePair> = {
-  'GQ': { ds: '4L', hs: '6L' },
-  'BC/BCM': { ds: '5L', hs: '6L' },
-  'SC/SCA/ST': { ds: '6L', hs: '6L' },
-  'BC-CC': { ds: '6L', hs: '6L' },
+  // OC/BC/BCM/BC/DNC group DS=4L HS=5L; SC/SCA/ST/BC-CC DS=6L HS=6L
+  'OC_GROUP': { ds: '4L', hs: '5L' },
+  'SC_GROUP': { ds: '6L', hs: '6L' },
 };
 
 export default function FeesScholarships() {
@@ -202,6 +196,12 @@ export default function FeesScholarships() {
                       <p className="text-xs text-gray-800 font-semibold mb-1">Tuition Fees (with Instruments & Materials)</p>
                       <p className="text-xl font-bold text-gray-900">{currentFees.ds}</p>
                       <p className="text-[11px] text-gray-700">Applies for Day Scholar (DS)</p>
+                      <div className="mt-2 inline-flex items-center gap-2 rounded-full bg-white/70 border border-blue-100 px-2 py-1">
+                        <svg className="w-3.5 h-3.5 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16c0 1.105.895 2 2 2h1a2 2 0 002-2M4 16V7a2 2 0 012-2h8a2 2 0 012 2v9m-14 0h14m0 0a2 2 0 01-2 2h-1a2 2 0 01-2-2m5 0V7m0 0h1a3 3 0 013 3v6m-4 0a2 2 0 002 2h1" />
+                        </svg>
+                        <span className="text-[11px] font-medium text-blue-800">Bus facility available</span>
+                      </div>
                     </div>
                     <div className={`rounded-lg p-4 border ${selectedFeeType === 'DS' ? 'opacity-60' : 'bg-emerald-50 border-emerald-100'} ${selectedFeeType === 'HS' ? 'ring-2 ring-emerald-300' : ''}`}>
                       <p className="text-xs text-gray-800 font-semibold mb-1">Hostel Fees (with Instruments & Materials)</p>
