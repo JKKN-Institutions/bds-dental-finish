@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export default function CampusFacilities() {
 
-  const powerStats = [{ number: "250+", label: "DENTAL CHAIRS", sublabel: "1:1 RATIO" }, { number: "500+", label: "PATIENTS", sublabel: "DAILY" }, { number: "₹15 Cr", label: "INFRASTRUCTURE", sublabel: "INVESTMENT" }, { number: "24/7", label: "SUPPORT", sublabel: "AVAILABLE" }];
+  const powerStats = [{ number: "250+", label: "DENTAL CHAIRS", sublabel: "1:1 RATIO" }, { number: "500+", label: "REAL PATIENTS", sublabel: "DAILY" }, { number: "₹15 Cr", label: "INFRASTRUCTURE", sublabel: "INVESTMENT" }, { number: "24/7", label: "SUPPORT", sublabel: "AVAILABLE" }];
 
 
 
@@ -86,14 +86,7 @@ export default function CampusFacilities() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
             {[
-              {
-                title: "CLINICAL REALITY",
-                icon: "🦷",
-                metric: "500+",
-                description: "Real patients daily",
-                subtitle: "More practice than any Tamil Nadu college",
-                color: "from-green-100/80 to-green-200/60"
-              },
+              
               {
                 title: "TECH FLEX",
                 icon: "🔬",
