@@ -507,7 +507,6 @@ export default function FacultySection() {
   const [selectedFaculty, setSelectedFaculty] = useState<FacultyMember | null>(null);
   const [activeDepartment, setActiveDepartment] = useState<string>('All');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
   const [failedLocalImageById, setFailedLocalImageById] = useState<Record<number, boolean>>({});
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const ref = useRef(null);
@@ -531,34 +530,18 @@ export default function FacultySection() {
     return `/images/department/${encodeURIComponent(dept)}/${encodeURIComponent(faculty.name)}.jpg`;
   };
 
-  // Auto-scroll functionality
-  useEffect(() => {
-    const scrollContainer = scrollContainerRef.current;
-    if (!scrollContainer) return;
+  // Manual scroll controls
+  const scrollLeft = () => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    container.scrollBy({ left: -320, behavior: 'smooth' });
+  };
 
-    let scrollInterval: NodeJS.Timeout;
-
-    const startAutoScroll = () => {
-      scrollInterval = setInterval(() => {
-        if (scrollContainer && !isHovered) {
-          scrollContainer.scrollLeft += 2; // Adjust speed here
-
-          // Reset scroll position when reaching the end
-          if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
-            scrollContainer.scrollLeft = 0;
-          }
-        }
-      }, 50); // Adjust interval here
-    };
-
-    startAutoScroll();
-
-    return () => {
-      if (scrollInterval) {
-        clearInterval(scrollInterval);
-      }
-    };
-  }, [isHovered]);
+  const scrollRight = () => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    container.scrollBy({ left: 320, behavior: 'smooth' });
+  };
 
   const nextCard = () => {
     setCurrentIndex((prev) => (prev + 1) % filteredFaculty.length);
@@ -678,11 +661,32 @@ export default function FacultySection() {
             transition={{ delay: 0.8, duration: 0.6 }}
             className="relative"
           >
+            {/* Manual scroll arrow controls */}
+            <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center">
+              <button
+                aria-label="Scroll left"
+                onClick={scrollLeft}
+                className="pointer-events-auto ml-2 rounded-full bg-white/90 shadow-md ring-1 ring-black/10 p-2 hover:bg-white transition"
+              >
+                <svg className="w-4 h-4 text-gray-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+            </div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center">
+              <button
+                aria-label="Scroll right"
+                onClick={scrollRight}
+                className="pointer-events-auto mr-2 rounded-full bg-white/90 shadow-md ring-1 ring-black/10 p-2 hover:bg-white transition"
+              >
+                <svg className="w-4 h-4 text-gray-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+            </div>
             <div
               ref={scrollContainerRef}
               className="flex gap-6 overflow-x-auto scrollbar-hide pb-6"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {filteredFaculty.map((faculty, index) => (
@@ -781,7 +785,7 @@ export default function FacultySection() {
                 <svg className="w-3 h-3 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-                <span>Auto-scrolling faculty profiles</span>
+                <span>Swipe or use arrows to scroll</span>
                 <svg className="w-3 h-3 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
