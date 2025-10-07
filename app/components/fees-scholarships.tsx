@@ -5,6 +5,7 @@ import { useMemo, useRef, useState } from 'react';
 
 type Quota = 'GQ' | 'MQ';
 type Community = 'GQ' | 'BC/BCM' | 'SC/SCA/ST' | 'BC-CC';
+type FeeType = 'DS' | 'HS';
 
 interface FeePair {
   ds: string; // Day Scholar
@@ -45,6 +46,7 @@ export default function FeesScholarships() {
 
   const [selectedQuota, setSelectedQuota] = useState<Quota | null>(null);
   const [selectedCommunity, setSelectedCommunity] = useState<Community | ''>('');
+  const [selectedFeeType, setSelectedFeeType] = useState<FeeType | ''>('');
 
   const communityOptions = useMemo(() => {
     if (!selectedQuota) return [] as { label: string; value: Community }[];
@@ -156,7 +158,25 @@ export default function FeesScholarships() {
                 <p className="text-sm text-gray-600">Select your Community to view fee details.</p>
               )}
               {currentFees && (
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                <div>
+                  {/* Accommodation selector */}
+                  <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-800 mb-1">Select Accommodation</label>
+                      <select
+                        className="w-full rounded-lg border-2 border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400"
+                        value={selectedFeeType}
+                        onChange={(e) => setSelectedFeeType((e.target.value || '') as FeeType | '')}
+                        aria-label="Select Accommodation Type"
+                      >
+                        <option value="">Show both</option>
+                        <option value="DS">Day Scholar (DS)</option>
+                        <option value="HS">Hostel (HS)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                   <div className="lg:col-span-2">
                     <div className="overflow-x-auto">
                       <table className="min-w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
@@ -170,24 +190,25 @@ export default function FeesScholarships() {
                         <tbody>
                           <tr className="odd:bg-white even:bg-gray-50">
                             <td className="px-4 py-3 border-t">{selectedCommunity}</td>
-                            <td className="px-4 py-3 border-t font-semibold">{currentFees.ds}</td>
-                            <td className="px-4 py-3 border-t font-semibold">{currentFees.hs}</td>
+                            <td className={`px-4 py-3 border-t font-semibold ${selectedFeeType === 'DS' ? 'bg-blue-50' : ''}`}>{currentFees.ds}</td>
+                            <td className={`px-4 py-3 border-t font-semibold ${selectedFeeType === 'HS' ? 'bg-emerald-50' : ''}`}>{currentFees.hs}</td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
+                    <div className={`rounded-lg p-4 border ${selectedFeeType === 'HS' ? 'opacity-60' : 'bg-blue-50 border-blue-100'} ${selectedFeeType === 'DS' ? 'ring-2 ring-blue-300' : ''}`}>
                       <p className="text-xs text-blue-700 font-semibold mb-1">Tuition Fees (with Instruments & Materials)</p>
                       <p className="text-xl font-bold text-blue-700">{currentFees.ds}</p>
                       <p className="text-[11px] text-blue-700/80">Applies for Day Scholar (DS)</p>
                     </div>
-                    <div className="bg-emerald-50 rounded-lg p-4 border border-emerald-100">
+                    <div className={`rounded-lg p-4 border ${selectedFeeType === 'DS' ? 'opacity-60' : 'bg-emerald-50 border-emerald-100'} ${selectedFeeType === 'HS' ? 'ring-2 ring-emerald-300' : ''}`}>
                       <p className="text-xs text-emerald-700 font-semibold mb-1">Hostel Fees (with Instruments & Materials)</p>
                       <p className="text-xl font-bold text-emerald-700">{currentFees.hs}</p>
                       <p className="text-[11px] text-emerald-700/80">Applies for Hostel (HS)</p>
                     </div>
+                  </div>
                   </div>
                 </div>
               )}
