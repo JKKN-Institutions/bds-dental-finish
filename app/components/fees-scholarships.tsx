@@ -87,14 +87,14 @@ export default function FeesScholarships() {
                   className={`w-full rounded-xl border-2 p-4 text-left transition-all ${selectedQuota === 'GQ' ? 'border-blue-600 bg-blue-50 shadow-md shadow-blue-600/10' : 'border-gray-200 hover:border-blue-300'}`}
                   aria-pressed={selectedQuota === 'GQ'}
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
                       <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${selectedQuota === 'GQ' ? 'bg-blue-600 text-white' : 'bg-blue-50 text-blue-600'}`}>
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <div>
+                        <div>
                         <p className="text-sm text-gray-600">General Quota</p>
                         <p className="text-base font-bold text-gray-900">GQ</p>
                       </div>
@@ -111,7 +111,7 @@ export default function FeesScholarships() {
                       <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${selectedQuota === 'MQ' ? 'bg-emerald-600 text-white' : 'bg-emerald-50 text-emerald-600'}`}>
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
+                          </svg>
                       </div>
                       <div>
                         <p className="text-sm text-gray-600">Management Quota</p>
@@ -120,8 +120,8 @@ export default function FeesScholarships() {
                     </div>
                   </div>
                 </button>
-              </div>
-            </div>
+                  </div>
+                </div>
 
             {/* Step 2: Community Selection */}
             <div className="px-6 py-5 border-b border-gray-100">
@@ -139,9 +139,9 @@ export default function FeesScholarships() {
                     <option key={opt.value} value={opt.value}>{opt.label} ({opt.value})</option>
                   ))}
                 </select>
-              </div>
-            </div>
-
+                      </div>
+                    </div>
+                    
             {/* Step 3: Fee Display */}
             <div className="px-6 py-5">
               <h3 className="text-lg font-bold text-gray-900 mb-3">Step 3: Fees</h3>
@@ -155,7 +155,7 @@ export default function FeesScholarships() {
                 <div>
                   {/* Accommodation selector */}
                   <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div>
+                      <div>
                       <label className="block text-sm font-medium text-gray-800 mb-1">Select Accommodation</label>
                       <select
                         className="w-full rounded-lg border-2 border-gray-200 px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400"

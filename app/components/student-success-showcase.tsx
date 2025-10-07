@@ -91,7 +91,7 @@ export default function StudentSuccessShowcase() {
               <div className="flex items-start gap-3">
                 {/* Student Photo */}
                 <div className="relative">
-                  <div className="w-16 h-[110px] md:h-20 rounded-lg overflow-hidden shadow-sm">
+                  <div className="w-22 h-20 md:w-14 md:h-24 rounded-lg overflow-hidden shadow-sm">
                     <img 
                       src={alumnus.studentPhoto} 
                       alt={`${alumnus.name} photo`}
