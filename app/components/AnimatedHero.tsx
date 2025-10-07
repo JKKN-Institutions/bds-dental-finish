@@ -2,12 +2,42 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useState, useRef } from 'react';
 
 interface AnimatedHeroProps {
   onOpenModal: () => void;
 }
 
 export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const toggleVideo = async () => {
+    if (videoRef.current) {
+      try {
+        if (isPlaying) {
+          videoRef.current.pause();
+        } else {
+          await videoRef.current.play();
+        }
+      } catch (error) {
+        console.error('Error playing video:', error);
+      }
+    }
+  };
+
+  const handleVideoPlay = () => {
+    setIsPlaying(true);
+  };
+
+  const handleVideoPause = () => {
+    setIsPlaying(false);
+  };
+
+  const handleVideoLoaded = () => {
+    setIsVideoLoaded(true);
+  };
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -374,135 +404,140 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
                 }}
               />
 
-              {/* Video Placeholder */}
-              <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 bg-gradient-to-br from-green-100 via-yellow-100 to-green-100 rounded-2xl overflow-hidden border border-white/50">
-                {/* Animated Gradient Overlay */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-green-600/20 via-yellow-600/20 to-green-600/20"
-                  animate={{
-                    backgroundPosition: ["0% 0%", "100% 100%"],
-                  }}
-                  transition={{
-                    duration: 6,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
-                />
+              {/* Video Player */}
+              <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 bg-black rounded-2xl overflow-hidden border border-white/50">
+                <video
+                  ref={videoRef}
+                  className="w-full h-full object-cover cursor-pointer"
+                  onClick={toggleVideo}
+                  onPlay={handleVideoPlay}
+                  onPause={handleVideoPause}
+                  onLoadedData={handleVideoLoaded}
+                  controls={false}
+                  preload="auto"
+                  muted
+                  playsInline
+                  loop
+                >
+                  <source src="/video/hero-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
 
-                {/* Shimmer Effect */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                  animate={{
-                    x: ["-100%", "100%"],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "linear",
-                    delay: 1
-                  }}
-                />
-
-                {/* Video Player Placeholder */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  {/* Outer Glow Ring */}
-                  <motion.div
-                    className="absolute w-24 h-24 sm:w-28 sm:h-28 bg-gradient-to-r from-green-400/30 to-yellow-500/30 rounded-full blur-xl"
-                    animate={{
-                      scale: [1, 1.1, 1],
-                      opacity: [0.3, 0.5, 0.3],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                  />
-
-                  {/* Main Play Button */}
-                  <motion.div
-                    className="relative w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-green-500 via-green-600 to-yellow-500 backdrop-blur-sm rounded-full flex items-center justify-center shadow-2xl cursor-pointer border-2 border-white/30 overflow-hidden group"
-                    whileHover={{
-                      scale: 1.15,
-                      boxShadow: "0 20px 40px rgba(0, 109, 58, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2)"
-                    }}
-                    whileTap={{ scale: 0.9 }}
-                    animate={{
-                      boxShadow: [
-                        "0 10px 30px rgba(0, 109, 58, 0.3)",
-                        "0 15px 35px rgba(0, 109, 58, 0.4)",
-                        "0 10px 30px rgba(0, 109, 58, 0.3)"
-                      ]
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                  >
-                    {/* Animated Background Gradient */}
+                {/* Play/Pause Overlay */}
+                {!isPlaying && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer" onClick={toggleVideo}>
+                    {/* Outer Glow Ring */}
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-br from-green-400 via-green-500 to-yellow-400"
+                      className="absolute w-24 h-24 sm:w-28 sm:h-28 bg-gradient-to-r from-green-400/30 to-yellow-500/30 rounded-full blur-xl"
                       animate={{
-                        backgroundPosition: ["0% 0%", "100% 100%"],
+                        scale: [1, 1.1, 1],
+                        opacity: [0.3, 0.5, 0.3],
                       }}
                       transition={{
-                        duration: 3,
+                        duration: 2,
                         repeat: Infinity,
-                        ease: "linear"
+                        ease: "easeInOut"
                       }}
                     />
 
-                    {/* Inner Glow Ring */}
-                    <div className="absolute inset-1 bg-gradient-to-br from-white/20 to-transparent rounded-full"></div>
-
-                    {/* Shimmer Effect */}
+                    {/* Main Play Button */}
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                      className="relative w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-green-500 via-green-600 to-yellow-500 backdrop-blur-sm rounded-full flex items-center justify-center shadow-2xl cursor-pointer border-2 border-white/30 overflow-hidden group"
+                      whileHover={{
+                        scale: 1.15,
+                        boxShadow: "0 20px 40px rgba(0, 109, 58, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2)"
+                      }}
+                      whileTap={{ scale: 0.9 }}
                       animate={{
-                        x: ["-100%", "100%"],
+                        boxShadow: [
+                          "0 10px 30px rgba(0, 109, 58, 0.3)",
+                          "0 15px 35px rgba(0, 109, 58, 0.4)",
+                          "0 10px 30px rgba(0, 109, 58, 0.3)"
+                        ]
                       }}
                       transition={{
-                        duration: 1.5,
+                        duration: 2,
                         repeat: Infinity,
-                        ease: "linear",
-                        delay: 0.5
+                        ease: "easeInOut"
                       }}
-                    />
+                    >
+                      {/* Animated Background Gradient */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-br from-green-400 via-green-500 to-yellow-400"
+                        animate={{
+                          backgroundPosition: ["0% 0%", "100% 100%"],
+                        }}
+                        transition={{
+                          duration: 3,
+                          repeat: Infinity,
+                          ease: "linear"
+                        }}
+                      />
 
-                    {/* Play Icon Container */}
-                    <div className="relative flex items-center justify-center">
-                      {/* Play Icon Background */}
-                      <div className="absolute w-6 h-6 sm:w-8 sm:h-8 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+                      {/* Inner Glow Ring */}
+                      <div className="absolute inset-1 bg-gradient-to-br from-white/20 to-transparent rounded-full"></div>
+
+                      {/* Shimmer Effect */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                        animate={{
+                          x: ["-100%", "100%"],
+                        }}
+                        transition={{
+                          duration: 1.5,
+                          repeat: Infinity,
+                          ease: "linear",
+                          delay: 0.5
+                        }}
+                      />
+
+                      {/* Play Icon Container */}
+                      <div className="relative flex items-center justify-center">
+                        {/* Play Icon Background */}
+                        <div className="absolute w-6 h-6 sm:w-8 sm:h-8 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+                          <motion.div
+                            className="w-0 h-0 border-l-[4px] sm:border-l-[6px] border-l-green-600 border-t-[3px] sm:border-t-[4px] border-t-transparent border-b-[3px] sm:border-b-[4px] border-b-transparent ml-0.5"
+                            animate={{
+                              x: [0, 2, 0],
+                            }}
+                            transition={{
+                              duration: 1.5,
+                              repeat: Infinity,
+                              ease: "easeInOut"
+                            }}
+                          />
+                        </div>
+
+                        {/* Outer Ring */}
                         <motion.div
-                          className="w-0 h-0 border-l-[4px] sm:border-l-[6px] border-l-green-600 border-t-[3px] sm:border-t-[4px] border-t-transparent border-b-[3px] sm:border-b-[4px] border-b-transparent ml-0.5"
+                          className="absolute w-10 h-10 sm:w-12 sm:h-12 border-2 border-white/40 rounded-full"
                           animate={{
-                            x: [0, 2, 0],
+                            scale: [1, 1.1, 1],
+                            opacity: [0.4, 0.6, 0.4],
                           }}
                           transition={{
-                            duration: 1.5,
+                            duration: 2,
                             repeat: Infinity,
                             ease: "easeInOut"
                           }}
                         />
                       </div>
+                    </motion.div>
+                  </div>
+                )}
 
-                      {/* Outer Ring */}
-                      <motion.div
-                        className="absolute w-10 h-10 sm:w-12 sm:h-12 border-2 border-white/40 rounded-full"
-                        animate={{
-                          scale: [1, 1.1, 1],
-                          opacity: [0.4, 0.6, 0.4],
-                        }}
-                        transition={{
-                          duration: 2,
-                          repeat: Infinity,
-                          ease: "easeInOut"
-                        }}
-                      />
-                    </div>
-                  </motion.div>
-                </div>
+                {/* Pause Overlay (when playing) */}
+                {isPlaying && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300 cursor-pointer" onClick={toggleVideo}>
+                    <motion.div
+                      className="w-12 h-12 bg-black/50 rounded-full flex items-center justify-center cursor-pointer"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      <div className="w-0 h-0 border-l-[3px] border-l-white border-t-[2px] border-t-transparent border-b-[2px] border-b-transparent"></div>
+                    </motion.div>
+                  </div>
+                )}
 
                 {/* Bottom Gradient Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-black/20 to-transparent"></div>
