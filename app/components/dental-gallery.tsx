@@ -115,11 +115,7 @@ const equipmentData = [
   }
 ];
 
-const successStats = [
-  { number: "₹3-6 LPA", label: "Starting Salary", icon: "💰" },
-  { number: "97%", label: "Placement Rate", icon: "🎯" },
-  { number: "200+", label: "Equipment Types", icon: "🔧" },
-];
+
 
 export default function DentalGallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -196,55 +192,7 @@ export default function DentalGallery() {
               Develop the skills and expertise that define modern dental practice.
             </motion.p>
 
-            {/* Crisp Success Stats Cards */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-3xl mx-auto mb-4"
-            >
-              {successStats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                  animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
-                  transition={{ delay: 0.6 + index * 0.1, duration: 0.6 }}
-                  whileHover={{ scale: 1.02, y: -2 }}
-                  className="group relative bg-white rounded-lg p-3 shadow-sm border border-slate-100 hover:shadow-md hover:border-slate-200 transition-all duration-500 overflow-hidden"
-                >
-                  {/* Crisp Background Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-50 opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  {/* Crisp Border Glow */}
-                  <div className="absolute inset-0 rounded-lg border border-slate-200/50 group-hover:border-slate-300/70 transition-all duration-500"></div>
-                  
-                  {/* Crisp Corner Accents */}
-                  <div className="absolute top-0 left-0 w-4 h-4 bg-gradient-to-br from-emerald-400/20 to-emerald-500/20 rounded-br-lg group-hover:from-emerald-400/30 group-hover:to-emerald-500/30 transition-all duration-500"></div>
-                  <div className="absolute bottom-0 right-0 w-3 h-3 bg-gradient-to-br from-slate-300/20 to-slate-400/20 rounded-tl-lg group-hover:from-slate-300/30 group-hover:to-slate-400/30 transition-all duration-500"></div>
-                  
-                  {/* Content */}
-                  <div className="relative z-10 text-center">
-                    {/* Crisp Icon with Enhanced Styling */}
-                    <div className="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-br from-slate-100 to-slate-200 rounded-lg mb-2 group-hover:from-slate-200 group-hover:to-slate-300 group-hover:scale-110 transition-all duration-500 shadow-sm">
-                      <span className="text-xl group-hover:scale-110 transition-transform duration-500">{stat.icon}</span>
-                    </div>
-                    
-                    {/* Crisp Number with Enhanced Typography */}
-                    <div className="text-lg md:text-xl font-bold bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent mb-1 group-hover:from-slate-800 group-hover:via-slate-700 group-hover:to-slate-800 transition-all duration-500">
-                      {stat.number}
-                    </div>
-                    
-                    {/* Crisp Label with Enhanced Styling */}
-                    <div className="text-xs font-semibold text-slate-600 group-hover:text-slate-700 transition-colors duration-500 tracking-wide uppercase">
-                      {stat.label}
-                    </div>
-                  </div>
-                  
-                  {/* Crisp Hover Effects */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover:from-white/5 group-hover:via-white/3 group-hover:to-white/8 transition-all duration-500 rounded-lg"></div>
-                </motion.div>
-              ))}
-            </motion.div>
+            
         </div>
 
           {/* Professional Equipment Gallery */}

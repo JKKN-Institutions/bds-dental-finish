@@ -534,13 +534,15 @@ export default function FacultySection() {
   const scrollLeft = () => {
     const container = scrollContainerRef.current;
     if (!container) return;
-    container.scrollBy({ left: -320, behavior: 'smooth' });
+    const step = Math.max(320, Math.floor(container.clientWidth * 0.9));
+    container.scrollBy({ left: -step, behavior: 'smooth' });
   };
 
   const scrollRight = () => {
     const container = scrollContainerRef.current;
     if (!container) return;
-    container.scrollBy({ left: 320, behavior: 'smooth' });
+    const step = Math.max(320, Math.floor(container.clientWidth * 0.9));
+    container.scrollBy({ left: step, behavior: 'smooth' });
   };
 
   const nextCard = () => {
@@ -662,7 +664,7 @@ export default function FacultySection() {
             className="relative"
           >
             {/* Manual scroll arrow controls */}
-            <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center">
+            <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center z-20">
               <button
                 aria-label="Scroll left"
                 onClick={scrollLeft}
@@ -673,7 +675,7 @@ export default function FacultySection() {
                 </svg>
               </button>
             </div>
-            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center">
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center z-20">
               <button
                 aria-label="Scroll right"
                 onClick={scrollRight}
