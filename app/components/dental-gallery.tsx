@@ -256,7 +256,7 @@ export default function DentalGallery() {
           >
           <div 
             ref={scrollRef}
-              className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4"
+              className="grid grid-cols-2 md:flex md:gap-4 md:overflow-x-auto md:scrollbar-hide md:snap-x md:snap-mandatory pb-4 gap-4"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
               {equipmentData.map((equipment, index) => (
@@ -265,7 +265,7 @@ export default function DentalGallery() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ delay: 0.7 + index * 0.1, duration: 0.6 }}
-                  className="flex-shrink-0 w-72 bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden snap-center hover:shadow-lg transition-all duration-500"
+                  className="w-full md:flex-shrink-0 md:w-72 bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden md:snap-center hover:shadow-lg transition-all duration-500"
                   onMouseEnter={() => setHoveredEquipment(equipment.id)}
                   onMouseLeave={() => setHoveredEquipment(null)}
                 >
