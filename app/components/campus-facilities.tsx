@@ -84,7 +84,7 @@ export default function CampusFacilities() {
               Discover the advanced facilities that set JKKN Dental College apart from other institutions
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
             {[
               
               {
@@ -139,9 +139,9 @@ export default function CampusFacilities() {
                 }}
                 className="group relative h-full"
               >
-                <div className="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 h-full flex flex-col">
+                <div className="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 h-full flex flex-col justify-between">
                   {/* Top Section: Icon and Title */}
-                  <div className="text-center mb-3 flex-shrink-0">
+                  <div className="text-center flex-shrink-0">
                     <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${facility.color} flex items-center justify-center mb-2 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                       <span className="text-xl">{facility.icon}</span>
                     </div>
@@ -151,14 +151,14 @@ export default function CampusFacilities() {
                   </div>
 
                   {/* Middle Section: Metric */}
-                  <div className="text-center mb-3 flex-shrink-0">
+                  <div className="text-center flex-shrink-0">
                     <div className="text-2xl font-bold bg-gradient-to-r from-green-500/80 to-yellow-500/80 bg-clip-text text-transparent">
                       {facility.metric}
                     </div>
                   </div>
 
                   {/* Bottom Section: Description */}
-                  <div className="text-center space-y-1 flex-grow flex flex-col justify-end">
+                  <div className="text-center space-y-1">
                     <p className="text-sm font-medium text-gray-800 leading-tight">
                       {facility.description}
                     </p>
