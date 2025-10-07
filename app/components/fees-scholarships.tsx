@@ -221,19 +221,19 @@ export default function FeesScholarships() {
           <div className="bg-white rounded-xl border border-gray-100 p-5">
             <h4 className="text-base font-bold text-gray-900 mb-3">Other Fees</h4>
             <div className="overflow-x-auto">
-              <table className="min-w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
+              <table className="min-w-full text-sm border border-gray-200 rounded-lg overflow-hidden text-gray-900">
                 <thead className="bg-gray-50">
                   <tr>
-                    <th className="text-left font-semibold text-gray-700 px-4 py-3 border-b">Fee Type</th>
-                    <th className="text-left font-semibold text-gray-700 px-4 py-3 border-b">Amount Range</th>
-                    <th className="text-left font-semibold text-gray-700 px-4 py-3 border-b">Note</th>
+                    <th className="text-left font-semibold text-gray-800 px-4 py-3 border-b">Fee Type</th>
+                    <th className="text-left font-semibold text-gray-800 px-4 py-3 border-b">Amount Range</th>
+                    <th className="text-left font-semibold text-gray-800 px-4 py-3 border-b">Note</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="odd:bg-white even:bg-gray-50">
-                    <td className="px-4 py-3 border-t">Exam, Books, & Uniform Fee</td>
-                    <td className="px-4 py-3 border-t">₹20,000 to ₹30,000</td>
-                    <td className="px-4 py-3 border-t">Range to be confirmed</td>
+                    <td className="px-4 py-3 border-t text-gray-900">Exam, Books, & Uniform Fee</td>
+                    <td className="px-4 py-3 border-t text-gray-900">₹20,000 to ₹30,000</td>
+                    <td className="px-4 py-3 border-t text-gray-900">Range to be confirmed</td>
                   </tr>
                 </tbody>
               </table>
@@ -242,19 +242,19 @@ export default function FeesScholarships() {
           <div className="bg-white rounded-xl border border-gray-100 p-5">
             <h4 className="text-base font-bold text-gray-900 mb-3">Application & Admission Fee</h4>
             <div className="overflow-x-auto">
-              <table className="min-w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
+              <table className="min-w-full text-sm border border-gray-200 rounded-lg overflow-hidden text-gray-900">
                 <thead className="bg-gray-50">
                   <tr>
-                    <th className="text-left font-semibold text-gray-700 px-4 py-3 border-b">Fee Type</th>
-                    <th className="text-left font-semibold text-gray-700 px-4 py-3 border-b">Amount</th>
-                    <th className="text-left font-semibold text-gray-700 px-4 py-3 border-b">Note</th>
+                    <th className="text-left font-semibold text-gray-800 px-4 py-3 border-b">Fee Type</th>
+                    <th className="text-left font-semibold text-gray-800 px-4 py-3 border-b">Amount</th>
+                    <th className="text-left font-semibold text-gray-800 px-4 py-3 border-b">Note</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="odd:bg-white even:bg-gray-50">
-                    <td className="px-4 py-3 border-t">Application & Admission Fee</td>
-                    <td className="px-4 py-3 border-t">₹11,000</td>
-                    <td className="px-4 py-3 border-t">One-time payment, applicable for the first year only.</td>
+                    <td className="px-4 py-3 border-t text-gray-900">Application & Admission Fee</td>
+                    <td className="px-4 py-3 border-t text-gray-900">₹11,000</td>
+                    <td className="px-4 py-3 border-t text-gray-900">One-time payment, applicable for the first year only.</td>
                   </tr>
                 </tbody>
               </table>
