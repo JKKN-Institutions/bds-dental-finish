@@ -599,10 +599,10 @@ export default function FacultySection() {
                       setActiveDepartment(dept);
                       setCurrentIndex(0);
                     }}
-                    className={`px-4 py-4 rounded-xl text-xs font-semibold transition-all duration-300 transform hover:scale-105 h-16 flex items-center justify-center text-center whitespace-nowrap flex-shrink-0 ${
+                    className={`px-4 py-4 rounded-xl text-xs font-semibold transition-all duration-300 transform hover:scale-105 h-16 flex items-center justify-center text-center whitespace-nowrap flex-shrink-0 my-4 ${
                       activeDepartment === dept
-                        ? 'bg-gradient-to-r from-green-600 to-yellow-600 text-white shadow-xl'
-                        : 'bg-white text-gray-600 hover:bg-gray-50 border-2 border-gray-200 hover:border-green-300 shadow-md'
+                        ? 'bg-gradient-to-r from-green-600 to-yellow-600 text-white'
+                        : 'bg-white text-gray-600 hover:bg-gray-50 border-2 border-gray-200 hover:border-green-300'
                     }`}
                   >
                     {dept}

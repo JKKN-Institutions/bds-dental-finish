@@ -204,7 +204,7 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
             >
               {/* Primary CTA Button */}
               <motion.button
-                className="bg-gradient-to-r from-green-600 via-green-700 to-yellow-600 hover:from-green-700 hover:via-green-800 hover:to-yellow-700 text-white font-bold py-3 sm:py-4 px-4 sm:px-4 rounded-2xl shadow-2xl transform transition-all duration-300 relative overflow-hidden group border border-white/20 font-['Poppins'] w-full sm:w-fit self-center sm:self-auto mx-auto sm:mx-0"
+                className="bg-gradient-to-r from-green-600 via-green-700 to-yellow-600 hover:from-green-700 hover:via-green-800 hover:to-yellow-700 text-white font-bold py-3 sm:py-4 px-2 sm:px-4 rounded-2xl shadow-2xl transform transition-all duration-300 relative overflow-hidden group border border-white/20 font-['Poppins'] w-auto max-w-[280px] sm:w-fit self-center sm:self-auto mx-auto sm:mx-0"
                 variants={buttonVariants}
                 whileHover={{
                   scale: 1.05,
@@ -274,7 +274,7 @@ export default function AnimatedHero({ onOpenModal }: AnimatedHeroProps) {
 
               {/* Secondary CTA Button */}
               <motion.button
-                className="bg-white/90 backdrop-blur-sm border-2 border-green-600/50 text-green-700 hover:bg-green-50 hover:border-green-700 hover:text-green-800 font-bold py-3 sm:py-4 px-4 sm:px-4 rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl relative overflow-hidden group w-full sm:w-fit self-center sm:self-auto mx-auto sm:mx-0"
+                className="bg-white/90 backdrop-blur-sm border-2 border-green-600/50 text-green-700 hover:bg-green-50 hover:border-green-700 hover:text-green-800 font-bold py-3 sm:py-4 px-2 sm:px-4 rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl relative overflow-hidden group w-auto max-w-[280px] sm:w-fit self-center sm:self-auto mx-auto sm:mx-0"
                 variants={buttonVariants}
                 whileHover={{
                   scale: 1.02,
