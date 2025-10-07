@@ -38,9 +38,9 @@ const facultyData: FacultyMember[] = [
     qualifications: ["BDS - 2015"],
     image: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=400&h=400&fit=crop&crop=face", // placeholder image
     email: "santhoshkumar@jkkn.edu.in",
-    experience: "6 years experience", 
-    achievements: ["Handled 9 students"], 
-    linkedin: "https://linkedin.com/" 
+    experience: "6 years experience",
+    achievements: ["Handled 9 students"],
+    linkedin: "https://linkedin.com/"
   },
   {
     id: 3,
@@ -130,7 +130,7 @@ const facultyData: FacultyMember[] = [
     id: 10,
     name: "Dr. K. Shanmathee",
     designation: "Tutor",
-    department: "Conservative and Endodontics", 
+    department: "Conservative and Endodontics",
     qualifications: ["BDS"],
     image: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=400&h=400&fit=crop&crop=face", // Placeholder image
     email: "shanmathee@jkkn.edu.in",
@@ -142,7 +142,7 @@ const facultyData: FacultyMember[] = [
     id: 11,
     name: "Dr. E. Jayapriya",
     designation: "Tutor",
-    department: "Conservative and Endodontics", 
+    department: "Conservative and Endodontics",
     qualifications: ["BDS"],
     image: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=400&h=400&fit=crop&crop=face", // Placeholder image
     email: "jayapriya@jkkn.edu.in",
@@ -151,16 +151,76 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/"
   },
   {
-    id: 12,
-    name: "Dr. Anjali Patel",
-    designation: "Associate Professor",
+    id: 45,
+    name: "Dr. R. Ramya",
+    designation: "Professor & HOD",
     department: "Orthodontics",
-    qualifications: ["MDS", "MOrth", "FDS"],
-    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop&crop=face",
-    email: "anjali.patel@jkkn.edu.in",
-    experience: "12 years experience",
-    achievements: ["Orthodontics Excellence Award", "28+ Research Publications"],
-    linkedin: "https://linkedin.com/in/dr-anjali-patel"
+    qualifications: ["M.D.S.", "Ph.D - 2011"],
+    image: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=400&h=400&fit=crop&crop=face",
+    email: "ramya.r@jkkn.edu.in",
+    experience: "13 years experience",
+    achievements: ["2 Research Publications"],
+    linkedin: "https://linkedin.com/in/dr-r-ramya"
+  },
+  {
+    id: 46,
+    name: "Dr. V. Vignesh Kumar",
+    designation: "Professor",
+    department: "Orthodontics",
+    qualifications: ["M.D.S. - 2007"],
+    image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=400&fit=crop&crop=face",
+    email: "vignesh.kumar@jkkn.edu.in",
+    experience: "17 years experience",
+    achievements: ["5 Research Publications"],
+    linkedin: "https://linkedin.com/in/dr-v-vignesh-kumar"
+  },
+  {
+    id: 47,
+    name: "Dr. V. Kumaran",
+    designation: "Reader",
+    department: "Orthodontics",
+    qualifications: ["M.D.S. - 2017"],
+    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face",
+    email: "kumaran.v@jkkn.edu.in",
+    experience: "7 years experience",
+    achievements: ["8 Research Publications"],
+    linkedin: "https://linkedin.com/in/dr-v-kumaran"
+  },
+  {
+    id: 49,
+    name: "Dr. K. Aishwarya",
+    designation: "Reader",
+    department: "Orthodontics",
+    qualifications: ["M.D.S. - 2017"],
+    image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=400&h=400&fit=crop&crop=face",
+    email: "aishwarya.k@jkkn.edu.in",
+    experience: "6 years experience",
+    achievements: ["11 Research Publications"],
+    linkedin: "https://linkedin.com/in/dr-k-aishwarya"
+  },
+  {
+    id: 50,
+    name: "Dr. K. Thankamani Ammal",
+    designation: "Sr. Lecturer",
+    department: "Orthodontics",
+    qualifications: ["M.D.S. - 2021"],
+    image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=400&h=400&fit=crop&crop=face",
+    email: "thankamani.ammal@jkkn.edu.in",
+    experience: "2 years experience",
+    achievements: ["11 Research Publications"],
+    linkedin: "https://linkedin.com/in/dr-k-thankamani-ammal"
+  },
+  {
+    id: 51,
+    name: "Dr. N. Kalaranjeni",
+    designation: "Sr. Lecturer",
+    department: "Orthodontics",
+    qualifications: ["M.D.S. - 2021"],
+    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=400&fit=crop&crop=face",
+    email: "kalaranjeni.n@jkkn.edu.in",
+    experience: "2 years experience",
+    achievements: ["6 Research Publications"],
+    linkedin: "https://linkedin.com/in/dr-n-kalaranjeni"
   },
 
   {
@@ -258,8 +318,8 @@ const facultyData: FacultyMember[] = [
     experience: "13 years experience",
     achievements: [],
     linkedin: "https://linkedin.com/"
-},
-{
+  },
+  {
     id: 21,
     name: "Dr. S. Santhosh",
     designation: "Reader",
@@ -270,8 +330,8 @@ const facultyData: FacultyMember[] = [
     experience: "10 years experience",
     achievements: [],
     linkedin: "https://linkedin.com/"
-},
-{
+  },
+  {
     id: 22,
     name: "Dr. R. Dhivya",
     designation: "Reader",
@@ -282,8 +342,8 @@ const facultyData: FacultyMember[] = [
     experience: "6 years experience",
     achievements: [],
     linkedin: "https://linkedin.com/"
-},
-{
+  },
+  {
     id: 23,
     name: "Dr. M. Radhika",
     designation: "Sr. Lecturer",
@@ -294,8 +354,8 @@ const facultyData: FacultyMember[] = [
     experience: "2 years experience",
     achievements: [],
     linkedin: "https://linkedin.com/"
-},
-{
+  },
+  {
     id: 24,
     name: "Dr. M. Nivethitha",
     designation: "Sr. Lecturer",
@@ -306,8 +366,8 @@ const facultyData: FacultyMember[] = [
     experience: "2 years experience",
     achievements: [],
     linkedin: "https://linkedin.com/"
-},
-{
+  },
+  {
     id: 25,
     name: "Dr. J. Jasmine Angel",
     designation: "Sr. Lecturer",
@@ -318,7 +378,7 @@ const facultyData: FacultyMember[] = [
     experience: "0 years experience",
     achievements: [],
     linkedin: "https://linkedin.com/"
-},
+  },
   {
     id: 26,
     name: "Dr. T. Dineshkumar",
@@ -355,14 +415,14 @@ const facultyData: FacultyMember[] = [
     achievements: ["Early Career Researcher", "Published 9 Papers"],
     linkedin: "https://linkedin.com/in/dr-j-swathiraman"
   },
-  
+
   {
     id: 29,
     name: "Dr. B. Sasirekha",
     designation: "Professor & HOD",
     department: "Oral Medicine and Radiology",
     qualifications: ["MDS"],
-    image: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=400&h=400&fit=crop&crop=face", 
+    image: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=400&h=400&fit=crop&crop=face",
     email: "sasirekha@jkkn.edu.in",
     experience: "12 years experience",
     achievements: [],
@@ -386,7 +446,7 @@ const facultyData: FacultyMember[] = [
     designation: "Reader",
     department: "Oral Medicine and Radiology",
     qualifications: ["MDS"],
-    image: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=400&h=400&fit=crop&crop=face", 
+    image: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=400&h=400&fit=crop&crop=face",
     email: "saranyadevi@jkkn.edu.in",
     experience: "7 years experience",
     achievements: [],
@@ -404,30 +464,19 @@ const facultyData: FacultyMember[] = [
     achievements: [],
     linkedin: ""
   },
-  {
-    id: 33,
-    name: "Dr. Arun Singh",
-    designation: "Professor",
-    department: "Pedodontics",
-    qualifications: ["MDS", "PhD", "FICD"],
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-    email: "arun.singh@jkkn.edu.in",
-    experience: "16 years experience",
-    achievements: ["Pathology Research Excellence", "38+ Research Publications"],
-    linkedin: "https://linkedin.com/in/dr-arun-singh"
-  },
+ 
   {
     id: 34,
     name: "Dr. K. Keerthana",
     designation: "Tutor",
-    department: "Inplayer",
+    department: "Pedodontics",
     qualifications: ["BDS - 2018"],
     image: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=400&h=400&fit=crop&crop=face",
-    email: "keerthana@jkkn.edu.in", 
-    experience: "1 year experience", 
-    achievements: [], 
-    linkedin: "https://linkedin.com/" 
-},
+    email: "keerthana@jkkn.edu.in",
+    experience: "1 year experience",
+    achievements: [],
+    linkedin: "https://linkedin.com/"
+  },
   {
     id: 35,
     name: "Dr. C. Selvakumar",
@@ -439,7 +488,7 @@ const facultyData: FacultyMember[] = [
     experience: "8 years experience",
     achievements: ["4 Research Publications", "Contributions to Department Growth"],
     linkedin: "https://linkedin.com/in/dr-c-selvakumar"
-  },  
+  },
   {
     id: 36,
     name: "Dr. Arun Singh",
@@ -465,8 +514,8 @@ export default function FacultySection() {
 
   const departments = ['All', ...Array.from(new Set(facultyData.map(f => f.department)))];
 
-  const filteredFaculty = activeDepartment === 'All' 
-    ? facultyData 
+  const filteredFaculty = activeDepartment === 'All'
+    ? facultyData
     : facultyData.filter(f => f.department === activeDepartment);
 
   // Auto-scroll functionality
@@ -480,7 +529,7 @@ export default function FacultySection() {
       scrollInterval = setInterval(() => {
         if (scrollContainer && !isHovered) {
           scrollContainer.scrollLeft += 2; // Adjust speed here
-          
+
           // Reset scroll position when reaching the end
           if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
             scrollContainer.scrollLeft = 0;
@@ -514,7 +563,7 @@ export default function FacultySection() {
         <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-gradient-to-br from-green-100/40 to-emerald-200/40 rounded-full blur-2xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-56 h-56 bg-gradient-to-br from-yellow-100/30 to-orange-200/30 rounded-full blur-2xl"></div>
       </div>
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           ref={ref}
@@ -528,11 +577,11 @@ export default function FacultySection() {
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 font-['Poppins']">
               👩‍⚕️ World-Class Faculty Team
             </h2>
-            
+
             {/* Elegant Subtitle */}
             <div className="max-w-3xl mx-auto">
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-4 font-['Poppins']">
-                Learn from distinguished dental professionals with decades of experience, 
+                Learn from distinguished dental professionals with decades of experience,
                 international recognition, and cutting-edge research expertise
               </p>
             </div>
@@ -555,11 +604,10 @@ export default function FacultySection() {
                       setActiveDepartment(dept);
                       setCurrentIndex(0);
                     }}
-                    className={`px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-300 transform hover:scale-105 h-16 flex items-center justify-center text-center ${
-                      activeDepartment === dept
+                    className={`px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-300 transform hover:scale-105 h-16 flex items-center justify-center text-center ${activeDepartment === dept
                         ? 'bg-gradient-to-r from-green-600 to-yellow-600 text-white shadow-xl'
                         : 'bg-white text-gray-600 hover:bg-gray-50 border-2 border-gray-200 hover:border-green-300 shadow-md'
-                    }`}
+                      }`}
                   >
                     {dept}
                   </button>
@@ -577,11 +625,10 @@ export default function FacultySection() {
                       setActiveDepartment(dept);
                       setCurrentIndex(0);
                     }}
-                    className={`px-4 py-3 rounded-xl text-xs font-semibold transition-all duration-300 transform hover:scale-105 h-14 flex items-center justify-center text-center whitespace-nowrap flex-shrink-0 ${
-                      activeDepartment === dept
+                    className={`px-4 py-3 rounded-xl text-xs font-semibold transition-all duration-300 transform hover:scale-105 h-14 flex items-center justify-center text-center whitespace-nowrap flex-shrink-0 ${activeDepartment === dept
                         ? 'bg-gradient-to-r from-green-600 to-yellow-600 text-white shadow-xl'
                         : 'bg-white text-gray-600 hover:bg-gray-50 border-2 border-gray-200 hover:border-green-300 shadow-md'
-                    }`}
+                      }`}
                   >
                     {dept}
                   </button>
@@ -599,11 +646,10 @@ export default function FacultySection() {
                       setActiveDepartment(dept);
                       setCurrentIndex(0);
                     }}
-                    className={`px-4 py-4 rounded-xl text-xs font-semibold transition-all duration-300 transform hover:scale-105 h-16 flex items-center justify-center text-center whitespace-nowrap flex-shrink-0 my-4 ${
-                      activeDepartment === dept
+                    className={`px-4 py-4 rounded-xl text-xs font-semibold transition-all duration-300 transform hover:scale-105 h-16 flex items-center justify-center text-center whitespace-nowrap flex-shrink-0 my-4 ${activeDepartment === dept
                         ? 'bg-gradient-to-r from-green-600 to-yellow-600 text-white'
                         : 'bg-white text-gray-600 hover:bg-gray-50 border-2 border-gray-200 hover:border-green-300'
-                    }`}
+                      }`}
                   >
                     {dept}
                   </button>
@@ -644,10 +690,10 @@ export default function FacultySection() {
                         priority={index < 3}
                       />
                     </div>
-                    
+
                     {/* Background Pattern */}
                     <div className="absolute inset-0 bg-gradient-to-br from-green-50/60 to-yellow-50/60"></div>
-                    
+
                     {/* Decorative Elements */}
                     <div className="absolute top-2 right-2 w-3 h-3 bg-green-400 rounded-full opacity-60"></div>
                     <div className="absolute bottom-2 left-2 w-2 h-2 bg-yellow-400 rounded-full opacity-60"></div>
@@ -658,7 +704,7 @@ export default function FacultySection() {
                     <h3 className="text-lg font-bold text-gray-900 mb-1">{faculty.name}</h3>
                     <p className="text-green-600 font-semibold text-xs mb-1">{faculty.designation}</p>
                     <p className="text-gray-600 text-xs mb-2">{faculty.department}</p>
-                    
+
                     {/* Qualifications */}
                     <div className="flex flex-wrap gap-1 mb-2">
                       {faculty.qualifications.map((qual, idx) => (
@@ -678,7 +724,7 @@ export default function FacultySection() {
                         </div>
                         <p className="text-xs font-bold text-green-900">{faculty.experience}</p>
                       </div>
-                      
+
                       {/* Achievements */}
                       {faculty.achievements?.slice(0, 2).map((achievement, idx) => (
                         <p key={idx} className="text-xs text-gray-700">• {achievement}</p>
@@ -697,14 +743,14 @@ export default function FacultySection() {
                         Contact
                       </a>
                       {faculty.linkedin && (
-                        <a 
-                          href={faculty.linkedin} 
-                          target="_blank" 
+                        <a
+                          href={faculty.linkedin}
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-1 bg-gradient-to-r from-green-400 to-green-500 text-white px-3 py-1.5 rounded-full text-xs font-semibold hover:shadow-md transition-all duration-300 hover:scale-105"
                         >
                           <svg className="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                           </svg>
                           LinkedIn
                         </a>
