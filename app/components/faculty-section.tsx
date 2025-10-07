@@ -508,6 +508,7 @@ export default function FacultySection() {
   const [activeDepartment, setActiveDepartment] = useState<string>('All');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [failedLocalImageById, setFailedLocalImageById] = useState<Record<number, boolean>>({});
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -517,6 +518,18 @@ export default function FacultySection() {
   const filteredFaculty = activeDepartment === 'All'
     ? facultyData
     : facultyData.filter(f => f.department === activeDepartment);
+
+  const normalizeDepartmentDir = (department: string) => {
+    // Map department names to folder names when they differ
+    if (department === 'Orthodontics') return 'ORTHODONTICS';
+    return department;
+  };
+
+  const getLocalImagePath = (faculty: FacultyMember) => {
+    const dept = normalizeDepartmentDir(faculty.department);
+    // Use encodeURIComponent to safely handle spaces and special characters like &
+    return `/images/department/${encodeURIComponent(dept)}/${encodeURIComponent(faculty.name)}.jpg`;
+  };
 
   // Auto-scroll functionality
   useEffect(() => {
@@ -682,11 +695,12 @@ export default function FacultySection() {
                     {/* Small Square Image Card */}
                     <div className="w-28 h-20 rounded-lg shadow-lg overflow-hidden border-2 border-white relative z-10 bg-gray-100">
                       <Image
-                        src={faculty.image}
+                        src={failedLocalImageById[faculty.id] ? faculty.image : getLocalImagePath(faculty)}
                         alt={`${faculty.name} - ${faculty.designation}`}
                         width={112}
                         height={80}
                         className="w-full h-full object-contain object-center"
+                        onError={() => setFailedLocalImageById(prev => ({ ...prev, [faculty.id]: true }))}
                         priority={index < 3}
                       />
                     </div>
