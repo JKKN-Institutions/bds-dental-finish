@@ -56,22 +56,23 @@ export default function ComparisonTable() {
       label: "Loan Burden",
       mbbsValue: "High",
       bdsValue: "Moderate",
-      benefit: "Global Demand, Multiple Specializations"
+      benefit: "Lower Financial Stress"
     },
     {
       icon: "🎓",
       label: "Emergency Calls",
       mbbsValue: "Frequent",
       bdsValue: "Rare",
-      benefit: "Global Demand, Multiple Specializations"
+      benefit: "Predictable Schedule"
     },
     {
       icon: "🎓",
       label: "Stress Level",
       mbbsValue: "High",
       bdsValue: "Moderate",
-      benefit: "Global Demand, Multiple Specializations"
-    }
+      benefit: "Less Emotional Burden"
+    },
+    
   ];
 
   return (
