@@ -215,7 +215,7 @@ export default function FeesScholarships() {
                     {/* Tuition Fees - Show when DS is selected or no specific selection */}
                     {(!selectedFeeType || selectedFeeType === 'DS') && (
                       <div className={`rounded-lg p-4 border-2 ${selectedFeeType === 'DS' ? 'bg-blue-50 border-blue-200' : 'bg-gray-50 border-gray-200'}`}>
-                        <p className="text-sm font-semibold text-gray-800 mb-1">Tuition Fees (with Instruments & Materials)</p>
+                        <p className="text-sm font-semibold text-gray-800 mb-1">Tuition Fees (with Instruments & Materials & Bus)</p>
                         <p className="text-2xl font-bold text-gray-900">{currentFees.ds}</p>
                         <p className="text-xs text-gray-600">Hostel Fees (Day Scholar (DS))</p>
                         <button className="mt-2 inline-flex items-center gap-1 rounded-full bg-white border border-blue-200 px-3 py-1 text-xs font-medium text-blue-800">
