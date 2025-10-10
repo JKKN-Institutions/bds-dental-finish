@@ -129,6 +129,33 @@ export default function FeesScholarships() {
                         ))}
                       </select>
                     </div>
+
+                    {/* Other Fees Section */}
+                    <div className="mt-6">
+                      <div className="bg-orange-50 rounded-xl border border-orange-200 p-4">
+                        <div className="flex items-center gap-2 mb-3">
+                          <div className="w-6 h-6 bg-orange-100 rounded-lg flex items-center justify-center">
+                            <svg className="w-3 h-3 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                          </div>
+                          <h4 className="text-sm font-bold text-gray-900">Other Fees</h4>
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <div className="flex items-center justify-between p-3 rounded-lg border border-orange-200 bg-white">
+                            <div className="flex-1">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="text-xs font-semibold text-orange-800">Exam, Books, & Uniform Fee</span>
+                                <span className="px-2 py-1 bg-orange-200 text-orange-700 text-xs font-medium rounded-full">Variable</span>
+                              </div>
+                              <p className="text-sm font-bold text-gray-900">₹20,000 - ₹30,000</p>
+                              <p className="text-xs text-gray-600">Range to be confirmed</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
                   {/* Step 3: Fees */}
@@ -157,6 +184,33 @@ export default function FeesScholarships() {
                         </div>
                       </div>
                     )}
+
+                    {/* Application & Admission Fee Section */}
+                    <div className="mt-6">
+                      <div className="bg-blue-50 rounded-xl border border-blue-200 p-4">
+                        <div className="flex items-center gap-2 mb-3">
+                          <div className="w-6 h-6 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <svg className="w-3 h-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                            </svg>
+                          </div>
+                          <h4 className="text-sm font-bold text-gray-900">Application & Admission Fee</h4>
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <div className="flex items-center justify-between p-3 rounded-lg border border-blue-200 bg-white">
+                            <div className="flex-1">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="text-xs font-semibold text-blue-800">Application & Admission Fee</span>
+                                <span className="px-2 py-1 bg-blue-200 text-blue-700 text-xs font-medium rounded-full">One-time</span>
+                              </div>
+                              <p className="text-sm font-bold text-gray-900">₹11,000</p>
+                              <p className="text-xs text-gray-600">One-time payment, applicable for the first year only</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -194,73 +248,6 @@ export default function FeesScholarships() {
           </div>
           
         </motion.div>
-
-        {/* Bottom Sections - Other Fees and Application/Admission Fee */}
-        <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Other Fees Section */}
-          <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center">
-                <svg className="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <h4 className="text-lg font-bold text-gray-900">Other Fees</h4>
-            </div>
-            
-            <div className="space-y-3">
-              <button className="w-full p-4 rounded-xl border-2 border-orange-200 bg-orange-50 hover:bg-orange-100 hover:border-orange-300 transition-all duration-200 text-left group">
-                <div className="flex items-center justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-sm font-semibold text-orange-800">Exam, Books, & Uniform Fee</span>
-                      <span className="px-2 py-1 bg-orange-200 text-orange-700 text-xs font-medium rounded-full">Variable</span>
-                    </div>
-                    <p className="text-lg font-bold text-gray-900 mb-1">₹20,000 - ₹30,000</p>
-                    <p className="text-xs text-gray-600">Range to be confirmed</p>
-                  </div>
-                  <div className="ml-4">
-                    <svg className="w-5 h-5 text-orange-600 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </div>
-              </button>
-            </div>
-          </div>
-
-          {/* Application & Admission Fee Section */}
-          <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
-                <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                </svg>
-              </div>
-              <h4 className="text-lg font-bold text-gray-900">Application & Admission Fee</h4>
-            </div>
-            
-            <div className="space-y-3">
-              <button className="w-full p-4 rounded-xl border-2 border-blue-200 bg-blue-50 hover:bg-blue-100 hover:border-blue-300 transition-all duration-200 text-left group">
-                <div className="flex items-center justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-sm font-semibold text-blue-800">Application & Admission Fee</span>
-                      <span className="px-2 py-1 bg-blue-200 text-blue-700 text-xs font-medium rounded-full">One-time</span>
-                    </div>
-                    <p className="text-lg font-bold text-gray-900 mb-1">₹11,000</p>
-                    <p className="text-xs text-gray-600">One-time payment, applicable for the first year only</p>
-                  </div>
-                  <div className="ml-4">
-                    <svg className="w-5 h-5 text-blue-600 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </div>
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
