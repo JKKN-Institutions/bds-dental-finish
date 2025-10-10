@@ -8,11 +8,11 @@ export default function StudentSuccessShowcase() {
     { name: "Dr Ramya Ramdoss", role: "Associate Dean", company: "Saveetha Dental College", graduationYear: "1996", studentPhoto: placeholderPhoto },
     { name: "Dr Raghu", role: "oral pathalogy", company: "Honorary Professor Shefield University", graduationYear: "1996", studentPhoto: placeholderPhoto },
     { name: "Dr Sangeetha Duraisamy", role: "Orthodontist Professor", company: "SRM University", graduationYear: "1996", studentPhoto: placeholderPhoto },
-    { name: "Dr Prakash (Madurai)", role: "Endodontist", company: "Private Practice", graduationYear: "1996", studentPhoto: placeholderPhoto },
-    { name: "Dr Arun kumar", role: "Surgeon", company: "GKNM/KG", graduationYear: "1996", studentPhoto: placeholderPhoto },
-    { name: "Dr Arun(Namakkal)", role: "General Dentist", company: "Private Practice", graduationYear: "1996", studentPhoto: placeholderPhoto },
-    { name: "Dr Uma shankar", role: "General Dentist", company: "Private Practice", graduationYear: "1996", studentPhoto: placeholderPhoto },
-    { name: "Dr Subadharshin", role: "IAS", company: "Kallakurichi", graduationYear: "1996", studentPhoto: placeholderPhoto },
+    { name: "Dr Prakash ", role: "Endodontist", company: "Private Practice", graduationYear: "1996", studentPhoto: placeholderPhoto },
+    { name: "Dr Arun Kumar", role: "Surgeon", company: "GKNM/KG", graduationYear: "1996", studentPhoto: placeholderPhoto },
+    { name: "Dr Arun", role: "General Dentist", company: "Private Practice", graduationYear: "1996", studentPhoto: placeholderPhoto },
+    { name: "Dr Uma Shankar", role: "General Dentist", company: "Private Practice", graduationYear: "1996", studentPhoto: placeholderPhoto },
+    { name: "Dr Subadharshini", role: "IAS", company: "Kallakurichi", graduationYear: "1996", studentPhoto: placeholderPhoto },
     { name: "Dr Murali", role: "Major", company: "Army", graduationYear: "1996", studentPhoto: placeholderPhoto }
   ];
 
