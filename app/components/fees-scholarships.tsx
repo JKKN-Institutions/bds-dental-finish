@@ -113,26 +113,22 @@ export default function FeesScholarships() {
                   <div className="grid grid-cols-2 gap-4">
                     <button
                       onClick={() => { setSelectedQuota('GQ'); setSelectedCommunity(''); }}
-                      className={`w-full rounded-xl border-2 p-6 text-left transition-all shadow-sm ${selectedQuota === 'GQ' ? 'border-blue-600 bg-blue-50 shadow-md shadow-blue-600/10' : 'border-gray-200 hover:border-blue-300'}`}
+                      className={`w-full rounded-xl border-2 p-6 text-center lg:text-center text-left transition-all shadow-sm ${selectedQuota === 'GQ' ? 'border-blue-600 bg-blue-50 shadow-md shadow-blue-600/10' : 'border-gray-200 hover:border-blue-300'}`}
                       aria-pressed={selectedQuota === 'GQ'}
                     >
-                      <div className="flex items-center justify-center">
-                        <div>
-                          <p className="text-sm text-gray-600">General Quota</p>
-                          <p className="text-lg font-bold text-gray-900">GQ</p>
-                        </div>
+                      <div>
+                        <p className="text-sm text-gray-600">General Quota</p>
+                        <p className="text-lg font-bold text-gray-900">GQ</p>
                       </div>
                     </button>
                     <button
                       onClick={() => { setSelectedQuota('MQ'); setSelectedCommunity(''); }}
-                      className={`w-full rounded-xl border-2 p-6 text-left transition-all shadow-sm ${selectedQuota === 'MQ' ? 'border-green-600 bg-green-50 shadow-md shadow-green-600/10' : 'border-gray-200 hover:border-green-300'}`}
+                      className={`w-full rounded-xl border-2 p-6 text-center lg:text-center text-left transition-all shadow-sm ${selectedQuota === 'MQ' ? 'border-green-600 bg-green-50 shadow-md shadow-green-600/10' : 'border-gray-200 hover:border-green-300'}`}
                       aria-pressed={selectedQuota === 'MQ'}
                     >
-                      <div className="flex items-center justify-center">
-                        <div>
-                          <p className="text-sm text-gray-600">Management Quota</p>
-                          <p className="text-lg font-bold text-gray-900">MQ</p>
-                        </div>
+                      <div>
+                        <p className="text-sm text-gray-600">Management Quota</p>
+                        <p className="text-lg font-bold text-gray-900">MQ</p>
                       </div>
                     </button>
                   </div>
