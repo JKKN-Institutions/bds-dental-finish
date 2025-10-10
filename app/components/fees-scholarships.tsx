@@ -131,7 +131,7 @@ export default function FeesScholarships() {
                     </div>
 
                     {/* Other Fees Section */}
-                    <div className="mt-6">
+                    <div className="mt-6 hidden lg:block">
                       <div className="bg-orange-50 rounded-xl border border-orange-200 p-4">
                         <div className="flex items-center gap-2 mb-3">
                           <div className="w-6 h-6 bg-orange-100 rounded-lg flex items-center justify-center">
@@ -186,7 +186,7 @@ export default function FeesScholarships() {
                     )}
 
                     {/* Application & Admission Fee Section */}
-                    <div className="mt-6">
+                    <div className="mt-6 hidden lg:block">
                       <div className="bg-blue-50 rounded-xl border border-blue-200 p-4">
                         <div className="flex items-center gap-2 mb-3">
                           <div className="w-6 h-6 bg-blue-100 rounded-lg flex items-center justify-center">
