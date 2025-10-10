@@ -110,7 +110,7 @@ export default function FeesScholarships() {
                 {/* Step 1: Quota Selection */}
                 <div>
                   <h3 className="text-lg font-bold text-gray-900 mb-4">Step 1: Select Quota</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-4">
                     <button
                       onClick={() => { setSelectedQuota('GQ'); setSelectedCommunity(''); }}
                       className={`w-full rounded-xl border-2 p-6 text-left transition-all shadow-sm ${selectedQuota === 'GQ' ? 'border-blue-600 bg-blue-50 shadow-md shadow-blue-600/10' : 'border-gray-200 hover:border-blue-300'}`}
