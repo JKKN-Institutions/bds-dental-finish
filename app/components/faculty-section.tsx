@@ -30,18 +30,18 @@ const facultyData: FacultyMember[] = [
     achievements: ["Guided 5 PG students"],
     linkedin: "https://linkedin.com/in/dr-s-vinod-thangaswamy"
   },
-  {
-    id: 2,
-    name: "Dr. Santhoshkumar",
-    designation: "Tutor",
-    department: "Oral & Maxillofacial Surgery",
-    qualifications: ["BDS - 2015"],
-    image: "/images/department/Oral & Maxillofacial Surgery/DR.S.VINOD-THANGASWAMY.png", // Using available image as placeholder
-    email: "santhoshkumar@jkkn.edu.in",
-    experience: "6 years experience",
-    achievements: ["Handled 9 students"],
-    linkedin: "https://linkedin.com/"
-  },
+  // {
+  //   id: 2,
+  //   name: "Dr. Santhoshkumar",
+  //   designation: "Tutor",
+  //   department: "Oral & Maxillofacial Surgery",
+  //   qualifications: ["BDS - 2015"],
+  //   image: "/images/department/Oral & Maxillofacial Surgery/DR.S.VINOD-THANGASWAMY.png", // Using available image as placeholder
+  //   email: "santhoshkumar@jkkn.edu.in",
+  //   experience: "6 years experience",
+  //   achievements: ["Handled 9 students"],
+  //   linkedin: "https://linkedin.com/"
+  // },
   {
     id: 3,
     name: "Dr. J. Vijay Thiyagarajan",
@@ -151,7 +151,43 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/"
   },
   {
-    id: 45,
+    id: 12,
+    name: "Dr. Nandhini",
+    designation: "Tutor",
+    department: "Conservative and Endodontics",
+    qualifications: ["BDS","MDS"],
+    image: "/images/department/Conservative and Endodontics/DR-N-JAYAPRAKASH.png", // Using available image as placeholder
+    email: "nandhini@jkkn.edu.in",
+    experience: "1 years experience",
+    achievements: [],
+    linkedin: "https://linkedin.com/"
+  },
+  {
+    id: 13,
+    name: "Dr. Jothi",
+    designation: "Tutor",
+    department: "Conservative and Endodontics",
+    qualifications: ["BDS","MDS"],
+    image: "/images/department/Conservative and Endodontics/DR-N-JAYAPRAKASH.png", // Using available image as placeholder
+    email: "jothi@jkkn.edu.in",
+    experience: "3 years experience",
+    achievements: [],
+    linkedin: "https://linkedin.com/"
+  },
+  {
+    id: 14,
+    name: "Dr. Shruthi",
+    designation: "Tutor",
+    department: "Conservative and Endodontics",
+    qualifications: ["BDS","MDS"],
+    image: "/images/department/Conservative and Endodontics/DR-N-JAYAPRAKASH.png", // Using available image as placeholder
+    email: "shruthi@jkkn.edu.in",
+    experience: "3 years experience",
+    achievements: [],
+    linkedin: "https://linkedin.com/"
+  },
+  {
+    id: 15,
     name: "Dr. R. Ramya",
     designation: "Professor & HOD",
     department: "Orthodontics",
@@ -163,7 +199,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/in/dr-r-ramya"
   },
   {
-    id: 46,
+    id: 16,
     name: "Dr. V. Vignesh Kumar",
     designation: "Professor",
     department: "Orthodontics",
@@ -175,7 +211,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/in/dr-v-vignesh-kumar"
   },
   {
-    id: 47,
+    id: 17,
     name: "Dr. V. Kumaran",
     designation: "Reader",
     department: "Orthodontics",
@@ -187,7 +223,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/in/dr-v-kumaran"
   },
   {
-    id: 49,
+    id: 18,
     name: "Dr. K. Aishwarya",
     designation: "Reader",
     department: "Orthodontics",
@@ -199,7 +235,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/in/dr-k-aishwarya"
   },
   {
-    id: 50,
+    id: 19,
     name: "Dr. K. Thankamani Ammal",
     designation: "Sr. Lecturer",
     department: "Orthodontics",
@@ -211,7 +247,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/in/dr-k-thankamani-ammal"
   },
   {
-    id: 51,
+    id: 20,
     name: "Dr. N. Kalaranjeni",
     designation: "Sr. Lecturer",
     department: "Orthodontics",
@@ -222,9 +258,45 @@ const facultyData: FacultyMember[] = [
     achievements: ["6 Research Publications"],
     linkedin: "https://linkedin.com/in/dr-n-kalaranjeni"
   },
+  {
+    id: 21,
+    name: "Dr. E.R. Deepak",
+    designation: "Sr. Lecturer",
+    department: "Orthodontics",
+    qualifications: ["M.D.S. - 2023"],
+    image: "/images/department/ORTHODONTICS/DR.E.R.DEEPAK.png",
+    email: "deepak.er@jkkn.edu.in",
+    experience: "1 year experience",
+    achievements: ["9 Research Publications"],
+    linkedin: "https://linkedin.com/in/dr-er-deepak"
+},
+{
+    id: 22,
+    name: "Dr. Priyanka Selvaraj",
+    designation: "Sr. Lecturer",
+    department: "Orthodontics",
+    qualifications: ["M.D.S. - 2024"],
+    image: "/images/department/ORTHODONTICS/DR.PRIYANKA-SELVARAJ.png",
+    email: "priyanka.selvaraj@jkkn.edu.in",
+    experience: "0 year experience",
+    achievements: ["5 Research Publications"],
+    linkedin: "https://linkedin.com/in/dr-priyanka-selvaraj"
+},
+{
+    id: 23,
+    name: "Dr. Sumithra Devi",
+    designation: "Sr. Lecturer",
+    department: "Orthodontics",
+    qualifications: ["M.D.S. - 2024"],
+    image: "/images/department/ORTHODONTICS/DR.SUMITHRA-DEVI.png",
+    email: "sumithra.devi@jkkn.edu.in",
+    experience: "0 year experience",
+    achievements: ["2 Research Publications"],
+    linkedin: "https://linkedin.com/in/dr-sumithra-devi"
+},
 
   {
-    id: 13,
+    id: 24,
     name: "Dr. Dhanasekar B",
     designation: "Principal, Professor & HoD",
     department: "Prosthodontics",
@@ -236,7 +308,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/in/dr-dhanasekar-b"
   },
   {
-    id: 14,
+    id: 25,
     name: "Dr. C. Dhinesh Kumar",
     designation: "Professor",
     department: "Prosthodontics",
@@ -248,7 +320,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/in/dr-c-dhinesh-kumar"
   },
   {
-    id: 15,
+    id: 26,
     name: "Dr. D. Saisadan",
     designation: "Professor",
     department: "Prosthodontics",
@@ -260,7 +332,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/in/dr-d-saisadan"
   },
   {
-    id: 16,
+    id: 27,
     name: "Dr. N. Jagadesaan",
     designation: "Reader",
     department: "Prosthodontics",
@@ -272,7 +344,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/in/dr-n-jagadesaan"
   },
   {
-    id: 17,
+    id: 28,
     name: "Dr. K. Praveena",
     designation: "Reader",
     department: "Prosthodontics",
@@ -284,7 +356,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/in/dr-k-praveena"
   },
   {
-    id: 18,
+    id: 29,
     name: "Dr. K. G. Gowtham Vignesh",
     designation: "Sr. Lecturer",
     department: "Prosthodontics",
@@ -296,7 +368,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/in/dr-k-g-gowtham-vignesh"
   },
   {
-    id: 19,
+    id: 30,
     name: "Dr. P. Karthikeyan",
     designation: "Sr. Lecturer",
     department: "Prosthodontics",
@@ -308,7 +380,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/in/dr-p-karthikeyan"
   },
   {
-    id: 20,
+    id: 31,
     name: "Dr. P.K. Sasi Kumar",
     designation: "Professor & HoD",
     department: "Periodontics",
@@ -320,7 +392,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/"
   },
   {
-    id: 21,
+    id: 32,
     name: "Dr. S. Santhosh",
     designation: "Reader",
     department: "Periodontics",
@@ -332,7 +404,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/"
   },
   {
-    id: 22,
+    id: 33,
     name: "Dr. R. Dhivya",
     designation: "Reader",
     department: "Periodontics",
@@ -344,7 +416,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/"
   },
   {
-    id: 23,
+    id: 34,
     name: "Dr. M. Radhika",
     designation: "Sr. Lecturer",
     department: "Periodontics",
@@ -356,7 +428,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/"
   },
   {
-    id: 24,
+    id: 35,
     name: "Dr. M. Nivethitha",
     designation: "Sr. Lecturer",
     department: "Periodontics",
@@ -368,7 +440,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/"
   },
   {
-    id: 25,
+    id: 36,
     name: "Dr. J. Jasmine Angel",
     designation: "Sr. Lecturer",
     department: "Periodontics",
@@ -380,7 +452,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/"
   },
   {
-    id: 26,
+    id: 37,
     name: "Dr. T. Dineshkumar",
     designation: "Professor & HOD",
     department: "Oral Pathology",
@@ -392,7 +464,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/in/dr-t-dineshkumar"
   },
   {
-    id: 27,
+    id: 38,
     name: "Dr. S. Maheshwari",
     designation: "Sr. Lecturer",
     department: "Oral Pathology",
@@ -404,7 +476,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/in/dr-s-maheshwari"
   },
   {
-    id: 28,
+    id: 39,
     name: "Dr. J. Swathiraman",
     designation: "Sr. Lecturer",
     department: "Oral Pathology",
@@ -417,7 +489,7 @@ const facultyData: FacultyMember[] = [
   },
 
   {
-    id: 29,
+    id: 40,
     name: "Dr. B. Sasirekha",
     designation: "Professor & HOD",
     department: "Oral Medicine and Radiology",
@@ -429,7 +501,7 @@ const facultyData: FacultyMember[] = [
     linkedin: ""
   },
   {
-    id: 30,
+    id: 41,
     name: "Dr. P.K. Meenapriya",
     designation: "Professor",
     department: "Oral Medicine and Radiology",
@@ -441,7 +513,7 @@ const facultyData: FacultyMember[] = [
     linkedin: ""
   },
   {
-    id: 31,
+    id: 42,
     name: "Dr. K. Sakthi Saranya Devi",
     designation: "Reader",
     department: "Oral Medicine and Radiology",
@@ -453,7 +525,7 @@ const facultyData: FacultyMember[] = [
     linkedin: ""
   },
   {
-    id: 32,
+    id: 43,
     name: "Dr. S. Gokulapriya",
     designation: "Sr. Lecturer",
     department: "Oral Medicine and Radiology",
@@ -466,7 +538,7 @@ const facultyData: FacultyMember[] = [
   },
  
   {
-    id: 34,
+    id: 44,
     name: "Dr. K. Keerthana",
     designation: "Tutor",
     department: "Pedodontics",
@@ -478,7 +550,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/"
   },
   {
-    id: 35,
+    id: 45,
     name: "Dr. C. Selvakumar",
     designation: "Reader & HOD",
     department: "Public Health Dentistry",
@@ -490,7 +562,7 @@ const facultyData: FacultyMember[] = [
     linkedin: "https://linkedin.com/in/dr-c-selvakumar"
   },
   {
-    id: 36,
+    id: 46,
     name: "Dr. Arun Singh",
     designation: "Professor",
     department: "Basic Medical Science",
@@ -503,6 +575,12 @@ const facultyData: FacultyMember[] = [
   }
 ];
 
+// Ensure IDs are sequential starting from 1 regardless of the source data
+const sequencedFaculty: FacultyMember[] = facultyData.map((member, index) => ({
+  ...member,
+  id: index + 1,
+}));
+
 export default function FacultySection() {
   const [selectedFaculty, setSelectedFaculty] = useState<FacultyMember | null>(null);
   const [activeDepartment, setActiveDepartment] = useState<string>('All');
@@ -512,11 +590,11 @@ export default function FacultySection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const departments = ['All', ...Array.from(new Set(facultyData.map(f => f.department)))];
+  const departments = ['All', ...Array.from(new Set(sequencedFaculty.map(f => f.department)))];
 
   const filteredFaculty = activeDepartment === 'All'
-    ? facultyData
-    : facultyData.filter(f => f.department === activeDepartment);
+    ? sequencedFaculty
+    : sequencedFaculty.filter(f => f.department === activeDepartment);
 
   const normalizeDepartmentDir = (department: string) => {
     // Map department names to folder names when they differ
@@ -698,6 +776,13 @@ export default function FacultySection() {
                 >
                   {/* Faculty Image Section */}
                   <div className="h-32 bg-gradient-to-br from-green-100 to-yellow-100 flex items-center justify-center relative overflow-hidden">
+                    {/* Sequential ID Badge */}
+                    <span
+                      className="absolute top-2 left-2 z-20 inline-flex items-center justify-center rounded-full bg-white/90 text-gray-800 border border-gray-200 shadow px-2 py-0.5 text-[10px] font-semibold"
+                      aria-label={`Faculty ID ${faculty.id}`}
+                    >
+                      #{faculty.id}
+                    </span>
                     {/* Small Square Image Card */}
                     <div className="w-28 h-20 rounded-lg shadow-lg overflow-hidden border-2 border-white relative z-10 bg-gray-100">
                       <Image
