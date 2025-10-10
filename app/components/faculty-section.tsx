@@ -300,11 +300,11 @@ const facultyData: FacultyMember[] = [
     name: "Dr. Dhanasekar B",
     designation: "Principal, Professor & HoD",
     department: "Prosthodontics",
-    qualifications: ["MDS - 2002"],
+    qualifications: ["MDS","MFDS RCS","MFDS RCPS","MDTFEd","FDS RCS","Ph.D"],
     image: "/images/department/Prosthodontics/DR.C.DHINESH-KUMARL.png", // Using available image as placeholder
     email: "dhanasekar.b@jkkn.edu.in",
     experience: "22 years experience",
-    achievements: ["3 Research Publications"],
+    achievements: ["67+ Research Publications","Good Teacher Award - 2017, 18, 19"],
     linkedin: "https://linkedin.com/in/dr-dhanasekar-b"
   },
   {
