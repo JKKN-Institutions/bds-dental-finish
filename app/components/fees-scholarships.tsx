@@ -78,31 +78,7 @@ export default function FeesScholarships() {
           transition={{ delay: 0.15, duration: 0.6 }}
         >
           <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-            {/* Progress Indicator */}
-            <div className="px-6 py-4 border-b border-gray-100 bg-gray-50">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-sm font-medium text-gray-700">Step 1: Select Quota</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 bg-gray-300 rounded-full"></div>
-                    <span className="text-sm text-gray-500">Step 2</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
-                      <span className="text-xs font-bold text-white">3</span>
-                    </div>
-                    <span className="text-sm font-medium text-blue-600">Summary</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
 
             <div className="flex flex-col lg:flex-row">
               {/* Left Side - Main Content */}
@@ -134,55 +110,54 @@ export default function FeesScholarships() {
                   </div>
                 </div>
 
-                {/* Step 2: Community Selection */}
-                <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">Step 2: Select Your Community/Category</h3>
-                  <div className="max-w-md">
-                    <select
-                      className="w-full rounded-lg border-2 border-gray-200 px-4 py-3 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400 disabled:bg-gray-100 disabled:text-gray-400"
-                      disabled={!selectedQuota}
-                      value={selectedCommunity}
-                      onChange={(e) => setSelectedCommunity(e.target.value as Community)}
-                      aria-label="Select Community"
-                    >
-                      <option value="" disabled>{selectedQuota ? 'Choose Community' : 'Select a quota first'}</option>
-                      {communityOptions.map((opt) => (
-                        <option key={opt.value} value={opt.value}>{opt.label}</option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-
-                {/* Step 3: Fees */}
-                <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">Step 3: Fees</h3>
-                  {!selectedQuota && (
-                    <p className="text-sm text-gray-600">Please select a Quota to continue.</p>
-                  )}
-                  {selectedQuota && !selectedCommunity && (
-                    <p className="text-sm text-gray-600">Select your Community to view fee details.</p>
-                  )}
-                  {currentFees && (
-                    <div className="space-y-4">
-                      {/* Accommodation selector */}
-                      <div>
-                        <label className="block text-sm font-medium text-gray-800 mb-2">Select Accommodation</label>
-                        <select
-                          className="w-full max-w-md rounded-lg border-2 border-gray-200 px-4 py-3 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400"
-                          value={selectedFeeType}
-                          onChange={(e) => setSelectedFeeType((e.target.value || '') as FeeType | '')}
-                          aria-label="Select Accommodation Type"
-                        >
-                          <option value="">Show both</option>
-                          <option value="DS">Day Scholar (DS)</option>
-                          <option value="HS">Hostel (HS)</option>
-                        </select>
-                      </div>
-
-
-                      
+                {/* Step 2 & 3: Community Selection and Fees */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  {/* Step 2: Community Selection */}
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-4">Step 2: Select Your Community</h3>
+                    <div>
+                      <select
+                        className="w-full rounded-lg border-2 border-gray-200 px-4 py-3 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400 disabled:bg-gray-100 disabled:text-gray-400"
+                        disabled={!selectedQuota}
+                        value={selectedCommunity}
+                        onChange={(e) => setSelectedCommunity(e.target.value as Community)}
+                        aria-label="Select Community"
+                      >
+                        <option value="" disabled>{selectedQuota ? 'Choose Community' : 'Select a quota first'}</option>
+                        {communityOptions.map((opt) => (
+                          <option key={opt.value} value={opt.value}>{opt.label}</option>
+                        ))}
+                      </select>
                     </div>
-                  )}
+                  </div>
+
+                  {/* Step 3: Fees */}
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-4">Step 3: Fees</h3>
+                    {!selectedQuota && (
+                      <p className="text-sm text-gray-600">Please select a Quota to continue.</p>
+                    )}
+                    {selectedQuota && !selectedCommunity && (
+                      <p className="text-sm text-gray-600">Select your Community to view fee details.</p>
+                    )}
+                    {currentFees && (
+                      <div className="space-y-4">
+                        {/* Accommodation selector */}
+                        <div>
+                          <select
+                            className="w-full rounded-lg border-2 border-gray-200 px-4 py-3 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400"
+                            value={selectedFeeType}
+                            onChange={(e) => setSelectedFeeType((e.target.value || '') as FeeType | '')}
+                            aria-label="Select Accommodation Type"
+                          >
+                            <option value="">Show both</option>
+                            <option value="DS">Day Scholar (DS)</option>
+                            <option value="HS">Hostel (HS)</option>
+                          </select>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
 
@@ -217,6 +192,7 @@ export default function FeesScholarships() {
               )}
             </div>
           </div>
+          
         </motion.div>
 
         {/* Bottom Sections - Other Fees and Application/Admission Fee */}
