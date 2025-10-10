@@ -116,17 +116,10 @@ export default function FeesScholarships() {
                       className={`w-full rounded-xl border-2 p-6 text-left transition-all shadow-sm ${selectedQuota === 'GQ' ? 'border-blue-600 bg-blue-50 shadow-md shadow-blue-600/10' : 'border-gray-200 hover:border-blue-300'}`}
                       aria-pressed={selectedQuota === 'GQ'}
                     >
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-4">
-                          <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${selectedQuota === 'GQ' ? 'bg-blue-600 text-white' : 'bg-blue-50 text-blue-600'}`}>
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                          </div>
-                          <div>
-                            <p className="text-sm text-gray-600">General Quota</p>
-                            <p className="text-lg font-bold text-gray-900">GQ</p>
-                          </div>
+                      <div className="flex items-center justify-center">
+                        <div>
+                          <p className="text-sm text-gray-600">General Quota</p>
+                          <p className="text-lg font-bold text-gray-900">GQ</p>
                         </div>
                       </div>
                     </button>
@@ -135,17 +128,10 @@ export default function FeesScholarships() {
                       className={`w-full rounded-xl border-2 p-6 text-left transition-all shadow-sm ${selectedQuota === 'MQ' ? 'border-green-600 bg-green-50 shadow-md shadow-green-600/10' : 'border-gray-200 hover:border-green-300'}`}
                       aria-pressed={selectedQuota === 'MQ'}
                     >
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-4">
-                          <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${selectedQuota === 'MQ' ? 'bg-green-600 text-white' : 'bg-green-50 text-green-600'}`}>
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                          </div>
-                          <div>
-                            <p className="text-sm text-gray-600">Management Quota</p>
-                            <p className="text-lg font-bold text-gray-900">MQ</p>
-                          </div>
+                      <div className="flex items-center justify-center">
+                        <div>
+                          <p className="text-sm text-gray-600">Management Quota</p>
+                          <p className="text-lg font-bold text-gray-900">MQ</p>
                         </div>
                       </div>
                     </button>
